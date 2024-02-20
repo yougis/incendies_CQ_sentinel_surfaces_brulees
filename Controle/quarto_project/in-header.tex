@@ -1,0 +1,55 @@
+\usepackage{fontspec}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{eso-pic}
+\usepackage{changepage}
+\usepackage{tikz}
+\usepackage{sectsty}
+\usepackage{typearea}
+\usepackage{pdflscape}
+\usepackage{hyperref}
+\usepackage{ulem} % Pour le sous-lignage
+
+\usepackage{titlesec}
+\definecolor{color_orange}{RGB}{227,108,10} % Définit la couleur orange foncé du chapitre
+\definecolor{color_grey}{RGB}{128,128,128} % Définit la couleur grise du titre partie
+\definecolor{color_purple}{RGB}{102,0,102} % Définit la couleur mauve pour le titre sous partie.
+\definecolor{color_black}{RGB}{0,0,0} % Définit la couleur mauve pour le titre sous partie.
+
+\definecolor{head_color}{RGB}{250,192,144} % Définit la couleur orange clair pour l'en tête.
+
+% modification de l'en-tête
+\usepackage[automark]{scrlayer-scrpage}
+\clearpairofpagestyles % Efface les configurations d'en-tête et de pied de page par défaut
+\ihead{Contrôle des données en sortie de chaine INSIGHT} %titre du document
+\addtokomafont{pagehead}{\normalfont\fontsize{8pt}{10pt}\selectfont} %taille de l'en-tête
+\addtokomafont{pagehead}{\color{head_color}} % couleur de l'en-tête 
+
+% modification du pied de page
+
+\ifoot{Observatoire de l’environnement en Nouvelle-Calédonie. OEIL \\
+12 rue Tourville 98800 Nouméa - Tél. / Fax : 23 69 69 - \href{http://www.oeil.nc}{www.oeil.nc}} % Pied de page à gauche
+\addtokomafont{pagefoot}{\normalfont\fontsize{8pt}{10pt}\selectfont} % taille du pied de page
+\addtokomafont{pagefoot}{\color{color_grey}} % couleur du pied de page
+
+% modification de la position des numéro de page
+\cfoot*{} 
+\ofoot*{\pagemark} 
+\setkomafont{pagenumber}{\normalfont} % numéro des pages 
+
+\usepackage{float}
+\floatplacement{table}{H}  %positionne les tableaux comme défini dans le script
+
+\renewcommand{\thesection}{\Roman{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+\renewcommand{\theparagraph}{\thesubsubsection.\alph{paragraph}}
+\renewcommand{\thesubparagraph}{\roman{subparagraph}.\hspace{1.5em}}
+
+%modification des titres pour appliquer la version OEIL
+\titleformat*{\section}{\normalfont\fontsize{14pt}{19pt}\selectfont\color{color_orange}} % chapitre
+\titleformat*{\subsection}{\normalfont\fontsize{12pt}{19pt}\selectfont\color{color_grey}} % Titre partie
+\titleformat*{\subsubsection}{\normalfont\fontsize{11pt}{19pt}\selectfont\bfseries\itshape\color{color_purple}} %titre sous partie
+\titleformat*{\paragraph}{\normalfont\fontsize{11pt}{19pt}\selectfont\bfseries\itshape\color{color_black}} %titre sous partie
+\titleformat*{\subparagraph}{\normalfont\fontsize{11pt}{19pt}\selectfont\itshape\color{color_black}} %titre sous partie
+\titlespacing*{\subparagraph}{2em}{1.25ex plus 10ex minus .1ex}{1em plus .4em}

@@ -1,0 +1,70 @@
+% Script LaTex pour la mise en forme de la page de garde
+
+\definecolor{titreColor}{RGB}{227, 108, 10} %orange titre
+\definecolor{grey_color}{RGB}{128, 128, 128} %gris pour auteur et editeur
+\definecolor{date_color}{RGB}{227, 150, 70} % orange clair pour la date
+\definecolor{version_color}{RGB}{102, 0, 102} %mauve pour le versionning du rapport
+
+\noindent
+
+%ajout de l'image de fond 
+\begin{titlepage}
+    \vspace*{-18.18cm}
+    \hspace*{-5.7cm}
+    \begin{tikzpicture}
+        \clip [rounded corners=60pt] (0,2cm) rectangle (23.5cm,26cm); %arrondissement des bords d'image
+        \node[inner sep=0pt, anchor=south west] at (0,0) {
+            \includegraphics[width=27cm,height=16cm]{$image_font_1$}
+        };
+    \end{tikzpicture}
+
+    %ajout de l'image supérieur
+    \begin{tikzpicture}[remember picture, overlay]
+        \clip [rounded corners=30pt] (-0.5cm,-2.5cm) rectangle ++(9cm,5.5cm);
+        \node[inner sep=0pt, anchor=south west] at (-0.5cm,-2.5cm) { 
+            \includegraphics[width=10.5cm,height=6.5cm]{$image_font_2$}
+        };
+        \draw [white, line width=3pt, rounded corners=30pt] (-0.5cm,-2.5cm) rectangle ++(9cm,5.5cm); %trait blanc autour de l'image
+    \end{tikzpicture}
+
+% intégration des titre, sous-titre, auteurs et date
+    \begin{minipage}[2cm]{16cm}
+        \begin{adjustwidth}{-0.4cm}{1cm} 
+            \vspace{3.2cm}
+            {\fontsize{16}{20}\selectfont
+            \color{titreColor}
+            $title$\\
+            }
+
+            {\fontsize{12}{14}\selectfont
+            \color{grey_color}
+            $author$\\
+            }
+    
+            {\fontsize{12}{8}\selectfont
+            \color{date_color}
+            $date$\\
+            }
+
+        \end{adjustwidth}
+    \end{minipage}
+
+    %ajout du logo OEIL
+    \begin{tikzpicture}[remember picture,overlay]
+        \node [inner sep=0pt] at (12.5cm,-4.8cm) {\includegraphics[width=4.5cm,height=5.5cm]{$logo$} 
+        };
+    \end{tikzpicture}
+
+    %ajout d'element supplémentaire ou logo partenaire
+    \begin{minipage}[1cm]{16cm}
+        \begin{adjustwidth}{-0.4cm}{1cm} 
+            \vspace{3.4cm}
+            {\fontsize{11}{13}\selectfont
+            \color{version_color}
+            Document technique - Diffusion interne à l'OEIL
+            }
+        \end{adjustwidth}
+    \end{minipage}
+
+\end{titlepage}
+
