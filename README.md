@@ -5,7 +5,7 @@
 ## [1] Récupération des données données de surfaces brûlées Sentinel-2
 ---------------------------------------------------------------------------------- 
 
-Pour récupérer automatiquement les données de surfaces brûlées il est actuellement utilisé la méthode de "crontab".  
+Pour récupérer automatiquement les données de surfaces brûlées il est actuellement utilisé la méthode "crontab".  
 
 Un script shell nommé **"recup_surfaces_brulees_STL2_INSIGHT.sh"** est utilisé et fait appel au serveur INSIGHT pour copier les fichiers du répertoire signifié (dépendnat de la variable $year)  
 
@@ -18,3 +18,5 @@ Aide Crontab:
 * crontab -l : permet de vérifier la demande 
 
 Les données téléchargées sont au format .gpkg et stockées dans le lecteur réseaux "Archives/FEUX_INSIGHT/$year" et mis à jour quotidiennement.
+
+**Remarque : nécessite d'être connecté au VPN insight, possibilité de paramétrer un docker pour faire le travail.
