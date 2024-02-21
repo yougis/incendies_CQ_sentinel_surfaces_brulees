@@ -11,23 +11,7 @@ keep-tex: true
 logo: "img/OEIL_logo.png" #logo de l'oeil
 image_font_1: "img/feux1.jpg" #image de fond numéro 1
 image_font_2: "img/feux2.png" #image 2 supérieure
-format: 
-  pdf:
-    toc: True
-    toc-depth: 4
-    number-sections: true
-    geometry:
-      - top=25mm
-      - left=10mm
-      - right=10mm
-      - bottom=12.5mm
-    include-in-header: 
-      - "in-header.tex"
-    fig-pos: H
-    fontsize: 11pt
-    mainfont: Calibri
-    template-partials: 
-      - "before-body.tex"
+format: html
 
 execute:
   echo: false
@@ -53,6 +37,8 @@ from IPython.display import display, Latex, Markdown
 from tabulate import tabulate
 import datetime as dt
 import geopandas as gpd
+import holoviews as hv
+from holoviews import opts
 
 #brute
 yaml_list=['data_control_incendie.yaml']
@@ -107,6 +93,9 @@ for ax in [ax1, ax2]:
 ```
 
 ```{python}
+#| output: true
+#| echo: false
+#| warning: false
 tile_geom_path = 'N:/Informatique/SIG/Etudes/2023/2309_QC_feux/Travail/Scripts/CQ_sentinel_surfaces_brulees/Controle/shp/tiles_sentinel2_UTM.shp'
 tile_geom = gpd.read_file(tile_geom_path)
 
@@ -130,7 +119,6 @@ gdf_intersections['surface']=gdf_intersections.area/10000
 ```
 
 ```{python}
-#| output: false
 #| echo: false
 #| warning: false
 
@@ -151,4 +139,52 @@ ax.set_title('Titre de ma cartographie statistique')
 ax.set_axis_off()  # Cache les axes pour une visualisation épurée
 ax.set_xlim(50000, 9.5**6)
 
+```
+
+```{python}
+#| echo: false
+#| warning: false
+## time serie of number of burned area detected daily per tiles
+
+hv.extension('bokeh','matplotlib')
+
+surface_detectees_brutes['nom'] = [x[-5:] for x in surface_detectees_brutes['nom']]
+surface_detectees_brutes['date_'] = pd.to_datetime(surface_detectees_brutes['date_'])
+surfdetect_control_date=surface_detectees_brutes.set_index(surface_detectees_brutes['date_'])
+surfdetect_control_date=surfdetect_control_date[surfdetect_control_date.index>="2023-01-01"]
+surfdetect_control_date=surfdetect_control_date.reset_index(drop=True)
+
+daily_counts = surfdetect_control_date.groupby(['date_', 'nom']).size().reset_index(name='nombre_occurrences')
+
+daily_counts['date_'] = daily_counts['date_'].dt.strftime('%Y-%m-%d')
+
+key_dimensions   = [('date_', 'Date'),('nom', 'tuile')]
+value_dimensions = [('nombre_occurrences', 'Nombre de détection')]
+macro = hv.Table(daily_counts, key_dimensions, value_dimensions)
+
+bars = macro.to.bars(['Date','tuile'], 'Nombre de détection', [])
+bars.opts(
+    opts.Bars(color=hv.Cycle('Category20'),show_legend=True, stacked=True, legend_position='right',
+              tools=['hover'],height=500,width=1200, xrotation=90,title="Number of burned area detected per tiles over "+str(year)))
+```
+
+```{python}
+#| echo: false
+#| warning: false
+## time serie of sum of burned area detected daily per tile
+
+hv.extension('bokeh','matplotlib')
+
+daily_counts_surf = surfdetect_control_date.groupby(['date_', 'nom']).surface.sum().reset_index(name='surface_totale')
+
+daily_counts_surf['date_'] = daily_counts_surf['date_'].dt.strftime('%Y-%m-%d')
+
+key_dimensions   = [('date_', 'Date'),('nom', 'tuile')]
+value_dimensions = [('surface_totale', 'Surface (ha)')]
+macro = hv.Table(daily_counts_surf, key_dimensions, value_dimensions)
+
+bars = macro.to.bars(['Date','tuile'], 'Surface (ha)', [])
+bars.opts(
+    opts.Bars(color=hv.Cycle('Category20'),show_legend=True, legend_position='right',stacked=True, 
+              tools=['hover'],responsive=True, xrotation=90,title="Sum of burned area (ha) detected per tiles over "+str(year)))
 ```
