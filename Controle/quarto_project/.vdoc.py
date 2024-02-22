@@ -20,6 +20,10 @@
 #
 #
 #
+#
+#| output: false
+#| echo: false
+#| warning: false
 year=2023
 
 from dotenv import load_dotenv
@@ -32,7 +36,7 @@ import datetime as dt
 import geopandas as gpd
 import holoviews as hv
 from holoviews import opts
-load_dotenv()
+load_dotenv(".env")
 
 #brute
 yaml_list=['data_control_incendie.yaml']
@@ -111,7 +115,7 @@ dict(
 
 fig, ax1 = plt.subplots(1, 1, figsize=(10, 6))  
 
-df_concat_year.plot(column=df_concat_year['dalle_names'], cmap='gnuplot', legend=True, ax=ax1)
+df_concat_year.plot(column=df_concat_year['dalle_names'], cmap='gnuplot', ax=ax1)
 nc_limits.plot(ax=ax1, color='grey', alpha=0.5)
 plt.title('Number of fire detection with Sentinel-2 in ' +str(year))
 
@@ -125,52 +129,35 @@ plt.show();
 #
 #
 #
-#| output: false
-#| echo: false
-#| warning: false
-tile_geom_path = 'N:/Informatique/SIG/Etudes/2023/2309_QC_feux/Travail/Scripts/CQ_sentinel_surfaces_brulees/Controle/shp/tiles_sentinel2_UTM.shp'
-tile_geom = gpd.read_file(tile_geom_path)
-
-polygone_unique = nc_limits.unary_union
-gdf_union = gpd.GeoDataFrame(geometry=[polygone_unique], crs=nc_limits.crs)
-
-if gdf_union.crs != tile_geom.crs:
-    gdf_union = gdf_union.to_crs(tile_geom.crs)
-    
-intersections = []
-
-geom1 = gdf_union.geometry.iloc[0]
-for geom2 in tile_geom.geometry:
-    intersection = geom1.intersection(geom2)
-    if not intersection.is_empty:
-        intersections.append(intersection)
-
-gdf_intersections = gpd.GeoDataFrame(geometry=intersections, crs=tile_sentinel.crs)
-gdf_intersections['Name']=tile_geom['Name']
-gdf_intersections['surface']=gdf_intersections.area/10000
-
-tile_sentinel['surface']= gdf_intersections['surface']
+#
+#
+#| content: valuebox
+#| title: "Detected Area"
+dict(
+    icon = "fire",
+    color = "warning",
+    value = "3050 ha"
+)
 #
 #
 #
-#| output: true
-#| echo: false
-#| warning: false
-
-fig, ax = plt.subplots(1, 1, figsize=(10, 6))
-
-tile_sentinel.plot(column=tile_sentinel['surface'], cmap='jet', legend=True, ax=ax)
-nc_limits.plot(ax=ax, color='grey', alpha=0.5)
-
-for idx, row in tile_sentinel.iterrows():
-    centre = row['geometry'].centroid
-    ax.text(centre.x, centre.y, str(row['Name']), ha='center', va='center')
-
-ax.set_title('Land area (ha) for each tile')
-ax.set_axis_off()  
-ax.set_xlim(163, 169)
-plt.show();
+#| content: valuebox
+#| title: "Detected Area"
+dict(
+    icon = "fire",
+    color = "warning",
+    value = "3050 ha"
+)
 #
+#
+#
+#| content: valuebox
+#| title: "Detected Area"
+dict(
+    icon = "fire",
+    color = "warning",
+    value = "3050 ha"
+)
 #
 #
 #
@@ -287,6 +274,54 @@ layout.opts(
         tools=['hover'], height=300, width=700, xrotation=45
 ))
 #
+#
+#
+#
+#
+import hvplot.pandas
+import pandas as pd
+import panel as pn
+hv.extension('bokeh')
+
+plot=daily_counts.hvplot.bar(x='nom', y='nombre_occurrences',xlabel='Date', ylabel='Occurrences')
+
+selector = pn.widgets.Select(name="Nom tuile", options=[
+    '58KCC','58KCD','58KDB', '58KDC','58KEA','58KEB','58KEC',
+    '58KFA','58KFB','58KFC','58KGA','58KGB','58KGC','58KGV','58KHB'
+])
+
+selector.jslink(plot, value='cds.nom')
+
+pn.Row(plot,selector)
+#
+#
+#
+#
+#
+#
+import hvplot.pandas
+import pandas as pd
+import panel as pn
+hv.extension('bokeh')
+pn.extension()
+
+selector = pn.widgets.Select(name="Nom tuile", options=[
+    '58KCC','58KCD','58KDB', '58KDC','58KEA','58KEB','58KEC',
+    '58KFA','58KFB','58KFC','58KGA','58KGB','58KGC','58KGV','58KHB'
+])
+
+@pn.depends(selector.param.value)
+def update_histogram(selector_value):
+    subset = daily_counts[daily_counts['nom'] == selector_value]
+    return subset.hvplot.bar(
+        x='date_', y='nombre_occurrences',
+        title=f"Détection sur la tuile : {selector_value}",
+        xlabel='Date', ylabel='Occurrences'
+    ).opts(color='black', xrotation=45, height=500, width=1200, show_legend=False, legend_position='right')
+
+layout = pn.Row(selector, update_histogram)
+
+layout.servable()
 #
 #
 #

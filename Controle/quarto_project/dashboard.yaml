@@ -1,0 +1,17 @@
+sources:   
+  surfaces_detectees:
+    args:
+      geopandas_kwargs:
+        geom_col: geometry
+        crs: 3163
+      sql_expr: select * from feux_cq."sentinel_surfaces_detectees" where date_ >= to_timestamp('01-01-2023 00:00:00', 'dd-mm-yyyy hh24:mi:ss')
+      table: feux_cq."sentinel_surfaces_detectees"
+      uri: postgresql://{{env("DB_USER")}}:{{env("DB_PWD")}}@{{env("DB_HOST")}}:{{env("DB_PORT")}}/{{env("DB_WORKSPACE")}}
+    description: Incendies Sentinel Detectees 
+    driver: intake_geopandas.geopandas.PostGISSource
+layouts:
+  - title: Table
+    source: local_source
+    views:
+      - type: table
+        table: local_table
