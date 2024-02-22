@@ -18,13 +18,9 @@ execute:
 ---
 
 ```{python}
-#| output: false
-#| echo: false
-#| warning: false
-
 year=2023
+
 from dotenv import load_dotenv
-load_dotenv()
 import matplotlib.pyplot as plt
 from intake import open_catalog
 import pandas as pd
@@ -34,6 +30,7 @@ import datetime as dt
 import geopandas as gpd
 import holoviews as hv
 from holoviews import opts
+load_dotenv()
 
 #brute
 yaml_list=['data_control_incendie.yaml']
@@ -56,7 +53,7 @@ nc_limits=nc_limits.to_crs(epsg=4326)
 
 ## année en cours
 tile_occurence=pd.read_csv('N:/Informatique/SIG/Etudes/2023/2309_QC_feux/Travail/Scripts/CQ_sentinel_surfaces_brulees/Controle/tile_occurence.csv')
-tile_occurence['Name'] = [x[-5:] for x in tile_occurence['Unnamed: 0']]
+tile_occurence['Name'] = [x[-5:] for x in tile_occurence['dalle_names']]
 df_concat_year = pd.merge(tile_sentinel, tile_occurence, how='inner',on='Name')
 
 #### total
