@@ -228,7 +228,7 @@ layout.opts(
 #
 #| echo: false
 #| warning: false
-
+from bokeh.models.formatters import DatetimeTickFormatter
 import numpy as np
 hv.extension('bokeh')
 
@@ -239,89 +239,67 @@ def monthly_tiles(gdf,date_range,tile):
     daily_counts_tile=gdf[gdf['nom']==tile]
     daily_counts_tile_gaps = pd.merge(date_range, daily_counts_tile, on='date_', how='left')
     daily_counts_tile_gaps['nom'] = daily_counts_tile_gaps['nom'].fillna('Inconnu')
-
+    max_occurrence = daily_counts_tile_gaps['nombre_occurrences'].max()
+    formatter = DatetimeTickFormatter(days='%m')
     key_dimensions   = [('date_', 'Date'),('nom', 'tuile')]
     value_dimensions = [('nombre_occurrences', 'Occurence')]
     macro1 = hv.Table(daily_counts_tile_gaps, key_dimensions, value_dimensions)
-    graph1 = macro1.to.bars(['Date','tuile'], 'Occurence', [],label="Detection over tile : " + tile)
+    graph1 = macro1.to.bars(['Date','tuile'], 'Occurence', [],label="Detection over tile : " + tile,xformatter=formatter)
 
+    graph1 = graph1.opts(xformatter=formatter,ylim=(0, max_occurrence))
     return(graph1)
 
-graph2=monthly_tiles(daily_counts,full_date_series,list_tiles[0])
-graph3=monthly_tiles(daily_counts,full_date_series,list_tiles[1])
-graph4=monthly_tiles(daily_counts,full_date_series,list_tiles[2])
-graph5=monthly_tiles(daily_counts,full_date_series,list_tiles[3])
-graph6=monthly_tiles(daily_counts,full_date_series,list_tiles[4])
-
-graph7=monthly_tiles(daily_counts,full_date_series,list_tiles[5])
-graph8=monthly_tiles(daily_counts,full_date_series,list_tiles[6])
-graph9=monthly_tiles(daily_counts,full_date_series,list_tiles[7])
-graph10=monthly_tiles(daily_counts,full_date_series,list_tiles[8])
-graph11=monthly_tiles(daily_counts,full_date_series,list_tiles[9])
-
-graph12=monthly_tiles(daily_counts,full_date_series,list_tiles[10])
-graph13=monthly_tiles(daily_counts,full_date_series,list_tiles[11])
-graph14=monthly_tiles(daily_counts,full_date_series,list_tiles[12])
-graph15=monthly_tiles(daily_counts,full_date_series,list_tiles[13])
-graph16=monthly_tiles(daily_counts,full_date_series,list_tiles[14])
+graph_KDC=monthly_tiles(daily_counts,full_date_series,list_tiles[3])
+graph_KEB=monthly_tiles(daily_counts,full_date_series,list_tiles[5])
+graph_KFA=monthly_tiles(daily_counts,full_date_series,list_tiles[7])
 
 
-layout = (graph2 + graph3 + graph4 + graph5 + graph6+
-        graph7 + graph8 + graph9 + graph10 + graph11+
-        graph12 + graph13 + graph14 + graph15 + graph16).cols(3)
+layout = (graph_KDC + graph_KEB+ graph_KFA).cols(1)
 layout.opts(
-        opts.Bars(color='black', show_legend=False, legend_position='right', stacked=True, 
-        tools=['hover'], height=300, width=700, xrotation=45
+        opts.Bars(color='black', show_legend=False, legend_position='right', stacked=True, shared_axes=False,
+        tools=['hover'], height=600, width=1000, xrotation=45
 ))
 #
 #
 #
 #
 #
-import hvplot.pandas
-import pandas as pd
-import panel as pn
-hv.extension('bokeh')
+#
+#| echo: false
+#| warning: false
+graph_KFC=monthly_tiles(daily_counts,full_date_series,list_tiles[9])
+graph_KGC=monthly_tiles(daily_counts,full_date_series,list_tiles[11])
+graph_KGB=monthly_tiles(daily_counts,full_date_series,list_tiles[10])
+graph_KHB=monthly_tiles(daily_counts,full_date_series,list_tiles[14])
 
-plot=daily_counts.hvplot.bar(x='nom', y='nombre_occurrences',xlabel='Date', ylabel='Occurrences')
-
-selector = pn.widgets.Select(name="Nom tuile", options=[
-    '58KCC','58KCD','58KDB', '58KDC','58KEA','58KEB','58KEC',
-    '58KFA','58KFB','58KFC','58KGA','58KGB','58KGC','58KGV','58KHB'
-])
-
-selector.jslink(plot, value='cds.nom')
-
-pn.Row(plot,selector)
+layout = (graph_KFC + graph_KGC+ graph_KGB+graph_KHB).cols(2)
+layout.opts(
+        opts.Bars(color='black', show_legend=False, legend_position='right', stacked=True, shared_axes=False,
+        tools=['hover'], height=600, width=1000, xrotation=45
+))
 #
 #
 #
 #
 #
 #
-import hvplot.pandas
-import pandas as pd
-import panel as pn
-hv.extension('bokeh')
-pn.extension()
+#| echo: false
+#| warning: false
+graph2=monthly_tiles(daily_counts,full_date_series,list_tiles[0])
+graph3=monthly_tiles(daily_counts,full_date_series,list_tiles[1])
+graph4=monthly_tiles(daily_counts,full_date_series,list_tiles[2])
+graph6=monthly_tiles(daily_counts,full_date_series,list_tiles[4])
+graph8=monthly_tiles(daily_counts,full_date_series,list_tiles[6])
+graph10=monthly_tiles(daily_counts,full_date_series,list_tiles[8])
+graph14=monthly_tiles(daily_counts,full_date_series,list_tiles[12])
+graph15=monthly_tiles(daily_counts,full_date_series,list_tiles[13])
 
-selector = pn.widgets.Select(name="Nom tuile", options=[
-    '58KCC','58KCD','58KDB', '58KDC','58KEA','58KEB','58KEC',
-    '58KFA','58KFB','58KFC','58KGA','58KGB','58KGC','58KGV','58KHB'
-])
-
-@pn.depends(selector.param.value)
-def update_histogram(selector_value):
-    subset = daily_counts[daily_counts['nom'] == selector_value]
-    return subset.hvplot.bar(
-        x='date_', y='nombre_occurrences',
-        title=f"Détection sur la tuile : {selector_value}",
-        xlabel='Date', ylabel='Occurrences'
-    ).opts(color='black', xrotation=45, height=500, width=1200, show_legend=False, legend_position='right')
-
-layout = pn.Row(selector, update_histogram)
-
-layout.servable()
+layout = (graph2 + graph3+ graph4+graph6+graph8 + graph10+ graph14+graph15).cols(3)
+layout.opts(
+        opts.Bars(color='black', show_legend=False, legend_position='right', stacked=True, shared_axes=False,
+        tools=['hover'], height=600, width=1000, xrotation=45
+))
+#
 #
 #
 #
