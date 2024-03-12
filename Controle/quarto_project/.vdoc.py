@@ -244,7 +244,7 @@ def monthly_tiles(gdf,date_range,tile):
     key_dimensions   = [('date_', 'Date'),('nom', 'tuile')]
     value_dimensions = [('nombre_occurrences', 'Occurence')]
     macro1 = hv.Table(daily_counts_tile_gaps, key_dimensions, value_dimensions)
-    graph1 = macro1.to.bars(['Date','tuile'], 'Occurence', [],label="Detection over tile : " + tile,xformatter=formatter)
+    graph1 = macro1.to.bars(['Date','tuile'], 'Occurence', [],label="Detection over tile : " + tile)
 
     graph1 = graph1.opts(xformatter=formatter,ylim=(0, max_occurrence))
     return(graph1)
