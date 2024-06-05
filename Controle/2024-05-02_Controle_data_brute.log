@@ -1,0 +1,389 @@
+------------------------------------------------
+Check if unknown tiles are found in data
+------------------------------------------------
+Not unkonw tiles found in data - continue process
+------------------------------------------------
+Check if tile occurence
+------------------------------------------------
+dalle_names
+L2A_T58KDC    451
+L2A_T58KDB    257
+L2A_T58KEB    243
+L2A_T58KFB    176
+L2A_T58KFA    158
+L2A_T58KGB     59
+L2A_T58KCC     35
+L2A_T58KGA     22
+L2A_T58KEA     22
+L2A_T58KHB     13
+L2A_T58KEC     13
+L2A_T58KCD     12
+L2A_T58KGV      5
+L2A_T58KGC      2
+L2A_T58KFC      1
+Name: count, dtype: int64 !! Tile occurence - check tile name above or in code !! :
+------------------------------------------------
+Check if burned areas are not under 1 ha
+------------------------------------------------
+No surface found under 1ha - continue process
+------------------------------------------------
+Check if burned areas have wrong geometries
+------------------------------------------------
+258     L2A_T58KCC_20231222_8f9f5a4227acb66
+637     L2A_T58KEB_20231229_8f9f5ec23993204
+890     L2A_T58KCC_20231202_8f9f5a4235aa044
+1108    L2A_T58KDC_20231222_8f9f5ad9c79aa31
+1308    L2A_T58KDC_20231222_8f9f5e61b22b8b3
+1455    L2A_T58KDC_20231227_8f9f5a422af10d5
+Name: surface_id_h3, dtype: object !! WARNING !! burned areas geometries have errors - check surface_id_h3 above or in code !! :
+Empty GeoDataFrame
+Columns: [nom, province, commune, surface, geometry, date_, surface_id_h3, nom_court]
+Index: [] !! WARNING !! a geometry correction were applied - if empty continue process : 
+------------------------------------------------
+%s Check if burned areas are included into the following date interval
+------------------------------------------------
+Burned areas are included into date range - continue process
+------------------------------------------------
+%s Check if 2 identical geometries shape are observed at a same date
+------------------------------------------------
+NO identical geometries found at the same date - continue process
+------------------------------------------------
+%s Check if overlapping geometries at a same date are observed close to tile limits 
+------------------------------------------------
+581 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+604 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+441 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+767 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+758 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+941 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+942 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+952 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+1331 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+------------------------------------------------
+%s Check if overlapping geometries at a same date are observed from a same tile 
+------------------------------------------------
+                                 nom       province commune   surface  \
+50    SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  5.554917   
+1463  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  2.952621   
+
+                                               geometry       date_  \
+50    POLYGON ((237482.180 423269.200, 237492.190 42...  2023-12-27   
+1463  POLYGON ((237709.710 423660.880, 237719.720 42...  2023-12-27   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+50    L2A_T58KDC_20231227_8f9e2d36d1a44eb     58KDC    51        8.0  
+1463  L2A_T58KDC_20231227_8f9e2d36dcd8841     58KDC  1464        8.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                               nom       province commune    surface  \
+54  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  14.242285   
+55  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  13.611753   
+
+                                             geometry       date_  \
+54  POLYGON ((235920.470 420377.610, 235930.470 42...  2023-12-27   
+55  POLYGON ((236500.840 420361.410, 236520.840 42...  2023-12-27   
+
+                          surface_id_h3 nom_court  ID  groupe_id  
+54  L2A_T58KDC_20231227_8f9f5ad9ea116cd     58KDC  55        9.0  
+55  L2A_T58KDC_20231227_8f9f5ad9eba244a     58KDC  56        9.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                               nom       province commune   surface  \
+89  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  1.241014   
+92  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  2.131741   
+95  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  2.181780   
+
+                                             geometry       date_  \
+89  POLYGON ((233142.420 413806.450, 233152.420 41...  2023-12-27   
+92  POLYGON ((233293.070 413717.400, 233313.080 41...  2023-12-27   
+95  POLYGON ((233374.350 413527.850, 233394.360 41...  2023-12-27   
+
+                          surface_id_h3 nom_court  ID  groupe_id  
+89  L2A_T58KDC_20231227_8f9f5ad8c4f1c2d     58KDC  90       10.0  
+92  L2A_T58KDC_20231227_8f9f5ad8c41d01d     58KDC  93       10.0  
+95  L2A_T58KDC_20231227_8f9f5ad8c4210d2     58KDC  96       10.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune  surface  \
+102  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  1.57132   
+104  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  7.69647   
+
+                                              geometry       date_  \
+102  POLYGON ((244466.380 412430.060, 244486.390 41...  2023-12-27   
+104  POLYGON ((244636.520 412421.170, 244666.530 41...  2023-12-27   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+102  L2A_T58KDC_20231227_8f9f5adb542cc40     58KDC  103       11.0  
+104  L2A_T58KDC_20231227_8f9f5adb55006cd     58KDC  105       11.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+128  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  3.382512   
+129  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  2.942181   
+
+                                              geometry       date_  \
+128  POLYGON ((219158.960 408902.330, 219178.960 40...  2023-12-27   
+129  POLYGON ((218899.390 408820.580, 218919.400 40...  2023-12-27   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+128  L2A_T58KDC_20231227_8f9f5ac01518501     58KDC  129       12.0  
+129  L2A_T58KDC_20231227_8f9f5ac01553096     58KDC  130       12.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+205  SENTINEL2A_20231224_L2A_T58KDB  Province Nord    KONE   1.010656   
+209  SENTINEL2A_20231224_L2A_T58KDB  Province Nord    KONE  33.521727   
+
+                                              geometry       date_  \
+205  POLYGON ((286940.040 349409.960, 286950.050 34...  2023-12-24   
+209  POLYGON ((287159.920 349441.380, 287199.930 34...  2023-12-24   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+205  L2A_T58KDB_20231224_8f9f5e541b866a1     58KDB  206       15.0  
+209  L2A_T58KDB_20231224_8f9f5e541953c96     58KDB  210       15.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+345  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE   4.923230   
+350  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE  22.354641   
+
+                                              geometry       date_  \
+345  POLYGON ((294578.290 351659.640, 294588.300 35...  2023-12-29   
+350  POLYGON ((294820.090 351391.090, 294830.100 35...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+345  L2A_T58KDB_20231229_8f9f5e57380c484     58KDB  346       48.0  
+350  L2A_T58KDB_20231229_8f9f5e57028b253     58KDB  351       48.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+366  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE   3.672378   
+368  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE  85.165226   
+
+                                              geometry       date_  \
+366  POLYGON ((286942.480 349029.840, 286952.480 34...  2023-12-29   
+368  POLYGON ((287576.010 350074.260, 287596.010 35...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+366  L2A_T58KDB_20231229_8f9f5e541b22cd8     58KDB  367       56.0  
+368  L2A_T58KDB_20231229_8f9f5e54180c8f6     58KDB  369       56.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom      province commune   surface  \
+456  SENTINEL2B_20231229_L2A_T58KFB  Province Sud    THIO  1.050271   
+460  SENTINEL2B_20231229_L2A_T58KFB  Province Sud    THIO  1.660428   
+
+                                              geometry       date_  \
+456  POLYGON ((413535.010 283581.110, 413545.010 28...  2023-12-29   
+460  POLYGON ((413486.170 283400.770, 413496.170 28...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+456  L2A_T58KFB_20231229_8f9f5025d243603     58KFB  457       83.0  
+460  L2A_T58KFB_20231229_8f9f5025d260b5d     58KFB  461       83.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province  commune   surface  \
+645  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  1.040434   
+669  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  7.563147   
+
+                                              geometry       date_  \
+645  POLYGON ((380930.870 312937.940, 380940.880 31...  2023-12-29   
+669  POLYGON ((380851.310 312867.420, 380861.310 31...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+645  L2A_T58KEB_20231229_8f9f53b226f6b2b     58KEB  646      125.0  
+669  L2A_T58KEB_20231229_8f9f53b226046f0     58KEB  670      125.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province  commune   surface  \
+664  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  1.370560   
+678  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  1.580647   
+
+                                              geometry       date_  \
+664  POLYGON ((382080.010 305273.530, 382110.010 30...  2023-12-29   
+678  POLYGON ((381970.500 305192.810, 381980.500 30...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+664  L2A_T58KEB_20231229_8f9f5148b31252c     58KEB  665      126.0  
+678  L2A_T58KEB_20231229_8f9f5148b31d912     58KEB  679      126.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+703  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  CANALA  2.520962   
+704  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  CANALA  2.290876   
+
+                                              geometry       date_  \
+703  POLYGON ((388219.230 296220.810, 388239.230 29...  2023-12-29   
+704  POLYGON ((388009.450 296179.460, 388069.460 29...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+703  L2A_T58KEB_20231229_8f9f514ad4220c2     58KEB  704      128.0  
+704  L2A_T58KEB_20231229_8f9f514ad42bb9c     58KEB  705      128.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province    commune   surface  \
+745  SENTINEL2B_20231229_L2A_T58KEC  Province Nord  POINDIMIE  1.260871   
+751  SENTINEL2B_20231229_L2A_T58KEC  Province Nord  POINDIMIE  2.531749   
+
+                                              geometry       date_  \
+745  POLYGON ((323244.730 369518.760, 323254.730 36...  2023-12-29   
+751  POLYGON ((323384.770 369519.650, 323414.780 36...  2023-12-29   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+745  L2A_T58KEC_20231229_8f9f5325366c2ae     58KEC  746      131.0  
+751  L2A_T58KEC_20231229_8f9f53253759149     58KEC  752      131.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom      province commune    surface  \
+882  SENTINEL2A_20231224_L2A_T58KFA  Province Sud   PAITA   1.180317   
+886  SENTINEL2A_20231224_L2A_T58KFA  Province Sud   PAITA  74.119915   
+
+                                              geometry       date_  \
+882  POLYGON ((425175.160 240830.530, 425245.170 24...  2023-12-24   
+886  POLYGON ((425455.520 240782.370, 425465.520 24...  2023-12-24   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+882  L2A_T58KFA_20231224_8f9f51d1e04441a     58KFA  883      144.0  
+886  L2A_T58KFA_20231224_8f9f51d1eba4d9c     58KFA  887      144.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1054  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   1.121057   
+1056  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  56.132955   
+
+                                               geometry       date_  \
+1054  POLYGON ((231923.630 434788.090, 231933.630 43...  2023-12-22   
+1056  POLYGON ((232312.680 434960.750, 232322.680 43...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1054  L2A_T58KDC_20231222_8f9e2d264a184e5     58KDC  1055      185.0  
+1056  L2A_T58KDC_20231222_8f9e2d264840c66     58KDC  1057      185.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1089  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   3.563218   
+1093  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  72.315618   
+1094  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   5.174668   
+
+                                               geometry       date_  \
+1089  POLYGON ((235375.820 427127.160, 235385.820 42...  2023-12-22   
+1093  POLYGON ((235117.730 428336.030, 235137.740 42...  2023-12-22   
+1094  POLYGON ((235115.710 427125.440, 235155.720 42...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1089  L2A_T58KDC_20231222_8f9e2d36b15b8f5     58KDC  1090      186.0  
+1093  L2A_T58KDC_20231222_8f9e2d36b0844f4     58KDC  1094      186.0  
+1094  L2A_T58KDC_20231222_8f9e2d36b06d1b4     58KDC  1095      186.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1118  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   3.502995   
+1121  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  14.852684   
+
+                                               geometry       date_  \
+1118  POLYGON ((241799.980 416284.330, 241839.990 41...  2023-12-22   
+1121  POLYGON ((241368.820 416431.570, 241398.830 41...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1118  L2A_T58KDC_20231222_8f9f5adb32b6aa1     58KDC  1119      187.0  
+1121  L2A_T58KDC_20231222_8f9f5adb3289514     58KDC  1122      187.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1131  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   4.493759   
+1144  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  54.065192   
+
+                                               geometry       date_  \
+1131  POLYGON ((238087.860 414829.360, 238167.890 41...  2023-12-22   
+1144  POLYGON ((238418.190 414801.510, 238468.210 41...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1131  L2A_T58KDC_20231222_8f9f5ad805637ab     58KDC  1132      188.0  
+1144  L2A_T58KDC_20231222_8f9f5ad80c30a20     58KDC  1145      188.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1135  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  2.392012   
+1146  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  6.755668   
+
+                                               geometry       date_  \
+1135  POLYGON ((240983.140 414218.060, 240993.150 41...  2023-12-22   
+1146  POLYGON ((240945.030 413927.680, 240965.040 41...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1135  L2A_T58KDC_20231222_8f9f5adb164d443     58KDC  1136      189.0  
+1146  L2A_T58KDC_20231222_8f9f5adb1288251     58KDC  1147      189.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1139  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  14.742206   
+1154  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  33.427508   
+
+                                               geometry       date_  \
+1139  POLYGON ((236180.980 414226.580, 236190.980 41...  2023-12-22   
+1154  POLYGON ((236525.050 413628.580, 236545.060 41...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1139  L2A_T58KDC_20231222_8f9f5ad8026cd14     58KDC  1140      190.0  
+1154  L2A_T58KDC_20231222_8f9f5ad81d29981     58KDC  1155      190.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1159  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  3.903261   
+1165  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  9.708111   
+
+                                               geometry       date_  \
+1159  POLYGON ((246449.130 410612.210, 246609.200 41...  2023-12-22   
+1165  POLYGON ((246789.270 410614.430, 246809.280 41...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1159  L2A_T58KDC_20231222_8f9e2da5b52a783     58KDC  1160      191.0  
+1165  L2A_T58KDC_20231222_8f9e2da5bc9d2a4     58KDC  1166      191.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province    commune   surface  \
+1206  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  1.961557   
+1210  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  5.324232   
+
+                                               geometry       date_  \
+1206  POLYGON ((261966.780 396617.100, 261986.780 39...  2023-12-22   
+1210  POLYGON ((261614.830 396894.930, 261634.840 39...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1206  L2A_T58KDC_20231222_8f9e2db581359a6     58KDC  1207      192.0  
+1210  L2A_T58KDC_20231222_8f9e2db580346a6     58KDC  1211      192.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province    commune   surface  \
+1238  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  2.712122   
+1239  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  1.541205   
+
+                                               geometry       date_  \
+1238  POLYGON ((268658.770 392098.490, 268678.780 39...  2023-12-22   
+1239  POLYGON ((268409.260 392006.840, 268419.260 39...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1238  L2A_T58KDC_20231222_8f9e2db46d8b575     58KDC  1239      193.0  
+1239  L2A_T58KDC_20231222_8f9e2db46c1e970     58KDC  1240      193.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province    commune   surface  \
+1256  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  3.732826   
+1257  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  1.341014   
+
+                                               geometry       date_  \
+1256  POLYGON ((256633.840 390560.070, 256643.840 39...  2023-12-22   
+1257  POLYGON ((256664.630 390440.220, 256684.630 39...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1256  L2A_T58KDC_20231222_8f9e2db49c1bc51     58KDC  1257      194.0  
+1257  L2A_T58KDC_20231222_8f9e2db49c0ba4a     58KDC  1258      194.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province      commune   surface  \
+1280  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  KAALA GOMEN  8.826251   
+1281  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  KAALA GOMEN  4.022845   
+
+                                               geometry       date_  \
+1280  POLYGON ((241067.500 387527.740, 241487.640 38...  2023-12-22   
+1281  POLYGON ((240997.480 387527.280, 241037.490 38...  2023-12-22   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1280  L2A_T58KDC_20231222_8f9f5e68aae58cd     58KDC  1281      195.0  
+1281  L2A_T58KDC_20231222_8f9f5e68bda400c     58KDC  1282      195.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom      province       commune   surface  \
+1351  SENTINEL2A_20231221_L2A_T58KGA  Province Sud  ILE DES PINS  1.109311   
+1355  SENTINEL2A_20231221_L2A_T58KGA  Province Sud  ILE DES PINS  3.867583   
+
+                                               geometry       date_  \
+1351  POLYGON ((548878.880 179588.910, 548918.870 17...  2023-12-21   
+1355  POLYGON ((549516.880 179843.400, 549536.870 17...  2023-12-21   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1351  L2A_T58KGA_20231221_8f9f54a89a518c5     58KGA  1352      201.0  
+1355  L2A_T58KGA_20231221_8f9f54a89a01c08     58KGA  1356      201.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom           province commune   surface  \
+1369  SENTINEL2A_20231201_L2A_T58KGB  Province des Iles   LIFOU  1.508727   
+1370  SENTINEL2A_20231201_L2A_T58KGB  Province des Iles   LIFOU  1.878418   
+
+                                               geometry       date_  \
+1369  POLYGON ((540642.940 341959.510, 540682.920 34...  2023-12-01   
+1370  POLYGON ((540414.580 341708.200, 540424.570 34...  2023-12-01   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1369  L2A_T58KGB_20231201_8f9f562d04cc823     58KGB  1370      202.0  
+1370  L2A_T58KGB_20231201_8f9f562d07a0c23     58KGB  1371      202.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom      province       commune   surface  \
+1394  SENTINEL2A_20231231_L2A_T58KGA  Province Sud  ILE DES PINS  3.597799   
+1395  SENTINEL2A_20231231_L2A_T58KGA  Province Sud  ILE DES PINS  1.479095   
+
+                                               geometry       date_  \
+1394  POLYGON ((548240.460 179394.400, 548290.440 17...  2023-12-31   
+1395  POLYGON ((548251.810 179204.530, 548271.800 17...  2023-12-31   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1394  L2A_T58KGA_20231231_8f9f54ad4d550f5     58KGA  1395      203.0  
+1395  L2A_T58KGA_20231231_8f9f54af26db385     58KGA  1396      203.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom           province commune   surface  \
+1421  SENTINEL2A_20231221_L2A_T58KGB  Province des Iles   LIFOU  1.988199   
+1422  SENTINEL2A_20231221_L2A_T58KGB  Province des Iles   LIFOU  2.287929   
+
+                                               geometry       date_  \
+1421  POLYGON ((545881.840 343411.080, 545921.820 34...  2023-12-21   
+1422  POLYGON ((545843.080 343210.930, 545863.070 34...  2023-12-21   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1421  L2A_T58KGB_20231221_8f9f5628b5832b6     58KGB  1422      204.0  
+1422  L2A_T58KGB_20231221_8f9f5628b434d9b     58KGB  1423      204.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations

@@ -1,0 +1,1884 @@
+------------------------------------------------
+Check if unknown tiles are found in data
+------------------------------------------------
+Not unkonw tiles found in data - continue process
+------------------------------------------------
+Check if tile occurence
+------------------------------------------------
+dalle_names
+L2A_T58KDC    1538
+L2A_T58KDB     739
+L2A_T58KEB     694
+L2A_T58KFB     324
+L2A_T58KFA     260
+L2A_T58KGB     106
+L2A_T58KCC      46
+L2A_T58KGA      44
+L2A_T58KCD      38
+L2A_T58KHB      22
+L2A_T58KEA      22
+L2A_T58KEC      20
+L2A_T58KGV       9
+L2A_T58KGC       2
+L2A_T58KFC       1
+Name: count, dtype: int64 !! Tile occurence - check tile name above or in code !! :
+------------------------------------------------
+Check if burned areas are not under 1 ha
+------------------------------------------------
+No surface found under 1ha - continue process
+------------------------------------------------
+Check if burned areas have wrong geometries
+------------------------------------------------
+76      L2A_T58KCC_20231202_8f9f5a4235aa044
+294     L2A_T58KDC_20231222_8f9f5ad9c79aa31
+504     L2A_T58KDC_20231222_8f9f5e61b22b8b3
+983     L2A_T58KDC_20231227_8f9f5a422af10d5
+1229    L2A_T58KDC_20231202_8f9f5a4235aaaf6
+1466    L2A_T58KCC_20231202_8f9f5a4235aa044
+2915    L2A_T58KDC_20231222_8f9f5ad9c79aa31
+3118    L2A_T58KDC_20231222_8f9f5e61b22b8b3
+3128    L2A_T58KCC_20231222_8f9f5a4227acb66
+3494    L2A_T58KEB_20231229_8f9f5ec23993204
+Name: surface_id_h3, dtype: object !! WARNING !! burned areas geometries have errors - check surface_id_h3 above or in code !! :
+Empty GeoDataFrame
+Columns: [nom, province, commune, surface, geometry, date_, surface_id_h3, nom_court]
+Index: [] !! WARNING !! a geometry correction were applied - if empty continue process : 
+------------------------------------------------
+%s Check if burned areas are included into the following date interval
+------------------------------------------------
+Burned areas are included into date range - continue process
+------------------------------------------------
+%s Check if 2 identical geometries shape are observed at a same date
+------------------------------------------------
+[10, 550] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+549 !! DELETE !! geometry deleted : check above for informations
+[11, 75] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+74 !! DELETE !! geometry deleted : check above for informations
+[14, 1392] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1391 !! DELETE !! geometry deleted : check above for informations
+[15, 511] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+510 !! DELETE !! geometry deleted : check above for informations
+[16, 503] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+502 !! DELETE !! geometry deleted : check above for informations
+[17, 507] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+506 !! DELETE !! geometry deleted : check above for informations
+[18, 513] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+512 !! DELETE !! geometry deleted : check above for informations
+[19, 514] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+513 !! DELETE !! geometry deleted : check above for informations
+[20, 1524] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1523 !! DELETE !! geometry deleted : check above for informations
+[21, 525] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+524 !! DELETE !! geometry deleted : check above for informations
+[22, 526] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+525 !! DELETE !! geometry deleted : check above for informations
+[23, 518] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+517 !! DELETE !! geometry deleted : check above for informations
+[24, 528] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+527 !! DELETE !! geometry deleted : check above for informations
+[26, 533] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+532 !! DELETE !! geometry deleted : check above for informations
+[27, 534] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+533 !! DELETE !! geometry deleted : check above for informations
+[28, 535] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+534 !! DELETE !! geometry deleted : check above for informations
+[29, 536] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+535 !! DELETE !! geometry deleted : check above for informations
+[30, 539] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+538 !! DELETE !! geometry deleted : check above for informations
+[31, 544] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+543 !! DELETE !! geometry deleted : check above for informations
+[32, 545] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+544 !! DELETE !! geometry deleted : check above for informations
+[33, 546] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+545 !! DELETE !! geometry deleted : check above for informations
+[34, 547] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+546 !! DELETE !! geometry deleted : check above for informations
+[35, 819] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+818 !! DELETE !! geometry deleted : check above for informations
+[36, 820] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+819 !! DELETE !! geometry deleted : check above for informations
+[37, 821] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+820 !! DELETE !! geometry deleted : check above for informations
+[38, 828] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+827 !! DELETE !! geometry deleted : check above for informations
+[39, 829] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+828 !! DELETE !! geometry deleted : check above for informations
+[40, 830] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+829 !! DELETE !! geometry deleted : check above for informations
+[41, 831] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+830 !! DELETE !! geometry deleted : check above for informations
+[42, 832] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+831 !! DELETE !! geometry deleted : check above for informations
+[43, 839] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+838 !! DELETE !! geometry deleted : check above for informations
+[44, 840] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+839 !! DELETE !! geometry deleted : check above for informations
+[45, 841] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+840 !! DELETE !! geometry deleted : check above for informations
+[46, 842] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+841 !! DELETE !! geometry deleted : check above for informations
+[47, 843] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+842 !! DELETE !! geometry deleted : check above for informations
+[48, 844] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+843 !! DELETE !! geometry deleted : check above for informations
+[49, 845] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+844 !! DELETE !! geometry deleted : check above for informations
+[50, 850] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+849 !! DELETE !! geometry deleted : check above for informations
+[51, 851] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+850 !! DELETE !! geometry deleted : check above for informations
+[52, 852] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+851 !! DELETE !! geometry deleted : check above for informations
+[53, 853] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+852 !! DELETE !! geometry deleted : check above for informations
+[54, 580] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+579 !! DELETE !! geometry deleted : check above for informations
+[55, 854] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+853 !! DELETE !! geometry deleted : check above for informations
+[56, 855] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+854 !! DELETE !! geometry deleted : check above for informations
+[57, 856] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+855 !! DELETE !! geometry deleted : check above for informations
+[58, 857] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+856 !! DELETE !! geometry deleted : check above for informations
+[59, 859] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+858 !! DELETE !! geometry deleted : check above for informations
+[60, 860] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+859 !! DELETE !! geometry deleted : check above for informations
+[61, 861] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+860 !! DELETE !! geometry deleted : check above for informations
+[62, 862] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+861 !! DELETE !! geometry deleted : check above for informations
+[63, 863] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+862 !! DELETE !! geometry deleted : check above for informations
+[64, 864] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+863 !! DELETE !! geometry deleted : check above for informations
+[65, 3186] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3185 !! DELETE !! geometry deleted : check above for informations
+[66, 865] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+864 !! DELETE !! geometry deleted : check above for informations
+[67, 1208] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1207 !! DELETE !! geometry deleted : check above for informations
+[68, 1209] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1208 !! DELETE !! geometry deleted : check above for informations
+[69, 1210] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1209 !! DELETE !! geometry deleted : check above for informations
+[70, 1211] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1210 !! DELETE !! geometry deleted : check above for informations
+[71, 1212] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1211 !! DELETE !! geometry deleted : check above for informations
+[72, 1213] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1212 !! DELETE !! geometry deleted : check above for informations
+[73, 1214] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1213 !! DELETE !! geometry deleted : check above for informations
+[74, 1215] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1214 !! DELETE !! geometry deleted : check above for informations
+[76, 1216] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1215 !! DELETE !! geometry deleted : check above for informations
+[77, 1467] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1466 !! DELETE !! geometry deleted : check above for informations
+[78, 1468] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1467 !! DELETE !! geometry deleted : check above for informations
+[79, 1469] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1468 !! DELETE !! geometry deleted : check above for informations
+[80, 1470] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1469 !! DELETE !! geometry deleted : check above for informations
+[81, 1471] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1470 !! DELETE !! geometry deleted : check above for informations
+[82, 1477] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1476 !! DELETE !! geometry deleted : check above for informations
+[83, 1472] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1471 !! DELETE !! geometry deleted : check above for informations
+[84, 1474] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1473 !! DELETE !! geometry deleted : check above for informations
+[85, 1475] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1474 !! DELETE !! geometry deleted : check above for informations
+[86, 1476] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1475 !! DELETE !! geometry deleted : check above for informations
+[87, 3227] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3226 !! DELETE !! geometry deleted : check above for informations
+[88, 1479] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1478 !! DELETE !! geometry deleted : check above for informations
+[89, 1218] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1217 !! DELETE !! geometry deleted : check above for informations
+[90, 1219] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1218 !! DELETE !! geometry deleted : check above for informations
+[91, 1220] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1219 !! DELETE !! geometry deleted : check above for informations
+[92, 1225] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1224 !! DELETE !! geometry deleted : check above for informations
+[93, 1221] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1220 !! DELETE !! geometry deleted : check above for informations
+[94, 1222] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1221 !! DELETE !! geometry deleted : check above for informations
+[95, 1223] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1222 !! DELETE !! geometry deleted : check above for informations
+[96, 1224] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1223 !! DELETE !! geometry deleted : check above for informations
+[97, 2824] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2823 !! DELETE !! geometry deleted : check above for informations
+[98, 1226] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1225 !! DELETE !! geometry deleted : check above for informations
+[99, 1227] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1226 !! DELETE !! geometry deleted : check above for informations
+[100, 1228] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1227 !! DELETE !! geometry deleted : check above for informations
+[101, 1229] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1228 !! DELETE !! geometry deleted : check above for informations
+[102, 2832] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2831 !! DELETE !! geometry deleted : check above for informations
+[103, 3138] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3137 !! DELETE !! geometry deleted : check above for informations
+[104, 2830] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2829 !! DELETE !! geometry deleted : check above for informations
+[105, 2831] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2830 !! DELETE !! geometry deleted : check above for informations
+[106, 3140] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3139 !! DELETE !! geometry deleted : check above for informations
+[107, 3141] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3140 !! DELETE !! geometry deleted : check above for informations
+[108, 2835] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2834 !! DELETE !! geometry deleted : check above for informations
+[109, 2836] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2835 !! DELETE !! geometry deleted : check above for informations
+[110, 2837] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2836 !! DELETE !! geometry deleted : check above for informations
+[112, 3143] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3142 !! DELETE !! geometry deleted : check above for informations
+[113, 3144] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3143 !! DELETE !! geometry deleted : check above for informations
+[114, 3124] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3123 !! DELETE !! geometry deleted : check above for informations
+[115, 3145] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3144 !! DELETE !! geometry deleted : check above for informations
+[116, 3146] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3145 !! DELETE !! geometry deleted : check above for informations
+[117, 2842] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2841 !! DELETE !! geometry deleted : check above for informations
+[118, 3147] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3146 !! DELETE !! geometry deleted : check above for informations
+[119, 3148] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3147 !! DELETE !! geometry deleted : check above for informations
+[120, 3139] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3138 !! DELETE !! geometry deleted : check above for informations
+[121, 3120] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3119 !! DELETE !! geometry deleted : check above for informations
+[123, 3149] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3148 !! DELETE !! geometry deleted : check above for informations
+[124, 3150] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3149 !! DELETE !! geometry deleted : check above for informations
+[125, 3151] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3150 !! DELETE !! geometry deleted : check above for informations
+[126, 3152] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3151 !! DELETE !! geometry deleted : check above for informations
+[127, 3153] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3152 !! DELETE !! geometry deleted : check above for informations
+[128, 3154] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3153 !! DELETE !! geometry deleted : check above for informations
+[129, 3155] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3154 !! DELETE !! geometry deleted : check above for informations
+[130, 3156] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3155 !! DELETE !! geometry deleted : check above for informations
+[131, 3157] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3156 !! DELETE !! geometry deleted : check above for informations
+[132, 3158] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3157 !! DELETE !! geometry deleted : check above for informations
+[134, 3159] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3158 !! DELETE !! geometry deleted : check above for informations
+[135, 3160] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3159 !! DELETE !! geometry deleted : check above for informations
+[136, 3161] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3160 !! DELETE !! geometry deleted : check above for informations
+[137, 3162] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3161 !! DELETE !! geometry deleted : check above for informations
+[138, 3163] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3162 !! DELETE !! geometry deleted : check above for informations
+[139, 3164] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3163 !! DELETE !! geometry deleted : check above for informations
+[140, 3165] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3164 !! DELETE !! geometry deleted : check above for informations
+[141, 3166] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3165 !! DELETE !! geometry deleted : check above for informations
+[142, 3167] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3166 !! DELETE !! geometry deleted : check above for informations
+[143, 3168] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3167 !! DELETE !! geometry deleted : check above for informations
+[144, 3169] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3168 !! DELETE !! geometry deleted : check above for informations
+[145, 3170] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3169 !! DELETE !! geometry deleted : check above for informations
+[146, 3171] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3170 !! DELETE !! geometry deleted : check above for informations
+[147, 3172] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3171 !! DELETE !! geometry deleted : check above for informations
+[148, 3173] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3172 !! DELETE !! geometry deleted : check above for informations
+[149, 3174] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3173 !! DELETE !! geometry deleted : check above for informations
+[150, 3175] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3174 !! DELETE !! geometry deleted : check above for informations
+[151, 3176] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3175 !! DELETE !! geometry deleted : check above for informations
+[152, 3177] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3176 !! DELETE !! geometry deleted : check above for informations
+[153, 3178] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3177 !! DELETE !! geometry deleted : check above for informations
+[154, 3179] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3178 !! DELETE !! geometry deleted : check above for informations
+[155, 3180] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3179 !! DELETE !! geometry deleted : check above for informations
+[156, 3181] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3180 !! DELETE !! geometry deleted : check above for informations
+[157, 3182] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3181 !! DELETE !! geometry deleted : check above for informations
+[158, 3183] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3182 !! DELETE !! geometry deleted : check above for informations
+[159, 3184] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3183 !! DELETE !! geometry deleted : check above for informations
+[160, 3185] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3184 !! DELETE !! geometry deleted : check above for informations
+[161, 3078] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3077 !! DELETE !! geometry deleted : check above for informations
+[162, 3187] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3186 !! DELETE !! geometry deleted : check above for informations
+[163, 3188] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3187 !! DELETE !! geometry deleted : check above for informations
+[164, 3189] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3188 !! DELETE !! geometry deleted : check above for informations
+[165, 3190] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3189 !! DELETE !! geometry deleted : check above for informations
+[166, 3191] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3190 !! DELETE !! geometry deleted : check above for informations
+[167, 3192] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3191 !! DELETE !! geometry deleted : check above for informations
+[168, 3193] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3192 !! DELETE !! geometry deleted : check above for informations
+[169, 3194] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3193 !! DELETE !! geometry deleted : check above for informations
+[170, 3195] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3194 !! DELETE !! geometry deleted : check above for informations
+[171, 3196] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3195 !! DELETE !! geometry deleted : check above for informations
+[172, 3197] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3196 !! DELETE !! geometry deleted : check above for informations
+[173, 3198] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3197 !! DELETE !! geometry deleted : check above for informations
+[174, 3199] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3198 !! DELETE !! geometry deleted : check above for informations
+[175, 3200] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3199 !! DELETE !! geometry deleted : check above for informations
+[176, 3201] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3200 !! DELETE !! geometry deleted : check above for informations
+[177, 3202] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3201 !! DELETE !! geometry deleted : check above for informations
+[178, 3203] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3202 !! DELETE !! geometry deleted : check above for informations
+[179, 3204] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3203 !! DELETE !! geometry deleted : check above for informations
+[180, 3205] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3204 !! DELETE !! geometry deleted : check above for informations
+[181, 3206] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3205 !! DELETE !! geometry deleted : check above for informations
+[182, 3207] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3206 !! DELETE !! geometry deleted : check above for informations
+[183, 3208] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3207 !! DELETE !! geometry deleted : check above for informations
+[184, 3209] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3208 !! DELETE !! geometry deleted : check above for informations
+[185, 3210] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3209 !! DELETE !! geometry deleted : check above for informations
+[186, 3211] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3210 !! DELETE !! geometry deleted : check above for informations
+[187, 3212] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3211 !! DELETE !! geometry deleted : check above for informations
+[188, 3213] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3212 !! DELETE !! geometry deleted : check above for informations
+[189, 3214] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3213 !! DELETE !! geometry deleted : check above for informations
+[190, 3215] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3214 !! DELETE !! geometry deleted : check above for informations
+[191, 3216] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3215 !! DELETE !! geometry deleted : check above for informations
+[192, 3217] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3216 !! DELETE !! geometry deleted : check above for informations
+[193, 3218] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3217 !! DELETE !! geometry deleted : check above for informations
+[194, 3219] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3218 !! DELETE !! geometry deleted : check above for informations
+[195, 3220] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3219 !! DELETE !! geometry deleted : check above for informations
+[196, 3221] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3220 !! DELETE !! geometry deleted : check above for informations
+[197, 3222] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3221 !! DELETE !! geometry deleted : check above for informations
+[198, 3223] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3222 !! DELETE !! geometry deleted : check above for informations
+[199, 3224] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3223 !! DELETE !! geometry deleted : check above for informations
+[200, 3225] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3224 !! DELETE !! geometry deleted : check above for informations
+[201, 3226] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3225 !! DELETE !! geometry deleted : check above for informations
+[202, 2858] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2857 !! DELETE !! geometry deleted : check above for informations
+[203, 3228] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3227 !! DELETE !! geometry deleted : check above for informations
+[204, 3229] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3228 !! DELETE !! geometry deleted : check above for informations
+[205, 3230] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3229 !! DELETE !! geometry deleted : check above for informations
+[206, 3231] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3230 !! DELETE !! geometry deleted : check above for informations
+[207, 3232] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3231 !! DELETE !! geometry deleted : check above for informations
+[208, 3233] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3232 !! DELETE !! geometry deleted : check above for informations
+[209, 3234] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3233 !! DELETE !! geometry deleted : check above for informations
+[210, 3235] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3234 !! DELETE !! geometry deleted : check above for informations
+[211, 2878] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2877 !! DELETE !! geometry deleted : check above for informations
+[212, 3237] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3236 !! DELETE !! geometry deleted : check above for informations
+[213, 3238] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3237 !! DELETE !! geometry deleted : check above for informations
+[214, 3239] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3238 !! DELETE !! geometry deleted : check above for informations
+[215, 3240] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3239 !! DELETE !! geometry deleted : check above for informations
+[216, 2833] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2832 !! DELETE !! geometry deleted : check above for informations
+[217, 2838] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2837 !! DELETE !! geometry deleted : check above for informations
+[218, 2839] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2838 !! DELETE !! geometry deleted : check above for informations
+[219, 2840] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2839 !! DELETE !! geometry deleted : check above for informations
+[220, 2841] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2840 !! DELETE !! geometry deleted : check above for informations
+[221, 2847] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2846 !! DELETE !! geometry deleted : check above for informations
+[222, 2843] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2842 !! DELETE !! geometry deleted : check above for informations
+[223, 2844] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2843 !! DELETE !! geometry deleted : check above for informations
+[224, 2845] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2844 !! DELETE !! geometry deleted : check above for informations
+[225, 2846] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2845 !! DELETE !! geometry deleted : check above for informations
+[226, 2850] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2849 !! DELETE !! geometry deleted : check above for informations
+[227, 2849] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2848 !! DELETE !! geometry deleted : check above for informations
+[228, 2825] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2824 !! DELETE !! geometry deleted : check above for informations
+[229, 2834] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2833 !! DELETE !! geometry deleted : check above for informations
+[230, 2851] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2850 !! DELETE !! geometry deleted : check above for informations
+[231, 2852] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2851 !! DELETE !! geometry deleted : check above for informations
+[232, 2853] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2852 !! DELETE !! geometry deleted : check above for informations
+[233, 2854] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2853 !! DELETE !! geometry deleted : check above for informations
+[234, 2855] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2854 !! DELETE !! geometry deleted : check above for informations
+[235, 2856] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2855 !! DELETE !! geometry deleted : check above for informations
+[236, 2857] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2856 !! DELETE !! geometry deleted : check above for informations
+[237, 2871] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2870 !! DELETE !! geometry deleted : check above for informations
+[238, 2859] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2858 !! DELETE !! geometry deleted : check above for informations
+[239, 2860] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2859 !! DELETE !! geometry deleted : check above for informations
+[240, 2861] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2860 !! DELETE !! geometry deleted : check above for informations
+[241, 2862] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2861 !! DELETE !! geometry deleted : check above for informations
+[242, 2863] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2862 !! DELETE !! geometry deleted : check above for informations
+[243, 2864] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2863 !! DELETE !! geometry deleted : check above for informations
+[244, 2865] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2864 !! DELETE !! geometry deleted : check above for informations
+[245, 2866] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2865 !! DELETE !! geometry deleted : check above for informations
+[246, 2867] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2866 !! DELETE !! geometry deleted : check above for informations
+[247, 2868] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2867 !! DELETE !! geometry deleted : check above for informations
+[248, 2869] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2868 !! DELETE !! geometry deleted : check above for informations
+[249, 2870] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2869 !! DELETE !! geometry deleted : check above for informations
+[250, 2872] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2871 !! DELETE !! geometry deleted : check above for informations
+[251, 2873] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2872 !! DELETE !! geometry deleted : check above for informations
+[252, 2884] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2883 !! DELETE !! geometry deleted : check above for informations
+[253, 2874] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2873 !! DELETE !! geometry deleted : check above for informations
+[254, 2875] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2874 !! DELETE !! geometry deleted : check above for informations
+[255, 2876] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2875 !! DELETE !! geometry deleted : check above for informations
+[256, 2877] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2876 !! DELETE !! geometry deleted : check above for informations
+[257, 2967] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2966 !! DELETE !! geometry deleted : check above for informations
+[258, 2879] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2878 !! DELETE !! geometry deleted : check above for informations
+[259, 2880] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2879 !! DELETE !! geometry deleted : check above for informations
+[260, 2881] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2880 !! DELETE !! geometry deleted : check above for informations
+[261, 2882] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2881 !! DELETE !! geometry deleted : check above for informations
+[262, 2883] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2882 !! DELETE !! geometry deleted : check above for informations
+[263, 2931] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2930 !! DELETE !! geometry deleted : check above for informations
+[264, 2885] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2884 !! DELETE !! geometry deleted : check above for informations
+[265, 2886] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2885 !! DELETE !! geometry deleted : check above for informations
+[266, 2887] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2886 !! DELETE !! geometry deleted : check above for informations
+[267, 2888] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2887 !! DELETE !! geometry deleted : check above for informations
+[268, 2889] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2888 !! DELETE !! geometry deleted : check above for informations
+[269, 2848] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2847 !! DELETE !! geometry deleted : check above for informations
+[270, 2891] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2890 !! DELETE !! geometry deleted : check above for informations
+[271, 2892] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2891 !! DELETE !! geometry deleted : check above for informations
+[272, 2910] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2909 !! DELETE !! geometry deleted : check above for informations
+[273, 2894] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2893 !! DELETE !! geometry deleted : check above for informations
+[274, 2895] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2894 !! DELETE !! geometry deleted : check above for informations
+[275, 2896] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2895 !! DELETE !! geometry deleted : check above for informations
+[276, 2897] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2896 !! DELETE !! geometry deleted : check above for informations
+[277, 2898] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2897 !! DELETE !! geometry deleted : check above for informations
+[278, 2899] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2898 !! DELETE !! geometry deleted : check above for informations
+[279, 2900] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2899 !! DELETE !! geometry deleted : check above for informations
+[280, 2901] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2900 !! DELETE !! geometry deleted : check above for informations
+[281, 2902] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2901 !! DELETE !! geometry deleted : check above for informations
+[282, 2903] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2902 !! DELETE !! geometry deleted : check above for informations
+[283, 2904] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2903 !! DELETE !! geometry deleted : check above for informations
+[284, 2905] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2904 !! DELETE !! geometry deleted : check above for informations
+[285, 2906] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2905 !! DELETE !! geometry deleted : check above for informations
+[286, 2907] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2906 !! DELETE !! geometry deleted : check above for informations
+[287, 2908] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2907 !! DELETE !! geometry deleted : check above for informations
+[288, 2909] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2908 !! DELETE !! geometry deleted : check above for informations
+[290, 2911] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2910 !! DELETE !! geometry deleted : check above for informations
+[291, 2912] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2911 !! DELETE !! geometry deleted : check above for informations
+[292, 2913] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2912 !! DELETE !! geometry deleted : check above for informations
+[293, 2914] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2913 !! DELETE !! geometry deleted : check above for informations
+[294, 2915] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2914 !! DELETE !! geometry deleted : check above for informations
+[295, 2916] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2915 !! DELETE !! geometry deleted : check above for informations
+[296, 2917] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2916 !! DELETE !! geometry deleted : check above for informations
+[297, 2918] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2917 !! DELETE !! geometry deleted : check above for informations
+[298, 2919] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2918 !! DELETE !! geometry deleted : check above for informations
+[299, 2920] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2919 !! DELETE !! geometry deleted : check above for informations
+[300, 2921] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2920 !! DELETE !! geometry deleted : check above for informations
+[301, 2922] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2921 !! DELETE !! geometry deleted : check above for informations
+[302, 2923] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2922 !! DELETE !! geometry deleted : check above for informations
+[303, 2924] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2923 !! DELETE !! geometry deleted : check above for informations
+[304, 2925] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2924 !! DELETE !! geometry deleted : check above for informations
+[305, 2926] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2925 !! DELETE !! geometry deleted : check above for informations
+[306, 2927] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2926 !! DELETE !! geometry deleted : check above for informations
+[307, 2928] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2927 !! DELETE !! geometry deleted : check above for informations
+[308, 2929] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2928 !! DELETE !! geometry deleted : check above for informations
+[309, 2930] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2929 !! DELETE !! geometry deleted : check above for informations
+[310, 2960] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2959 !! DELETE !! geometry deleted : check above for informations
+[311, 2932] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2931 !! DELETE !! geometry deleted : check above for informations
+[312, 2933] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2932 !! DELETE !! geometry deleted : check above for informations
+[313, 2934] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2933 !! DELETE !! geometry deleted : check above for informations
+[314, 2935] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2934 !! DELETE !! geometry deleted : check above for informations
+[315, 2936] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2935 !! DELETE !! geometry deleted : check above for informations
+[316, 2937] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2936 !! DELETE !! geometry deleted : check above for informations
+[317, 2938] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2937 !! DELETE !! geometry deleted : check above for informations
+[318, 2939] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2938 !! DELETE !! geometry deleted : check above for informations
+[319, 2940] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2939 !! DELETE !! geometry deleted : check above for informations
+[320, 2941] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2940 !! DELETE !! geometry deleted : check above for informations
+[321, 2942] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2941 !! DELETE !! geometry deleted : check above for informations
+[322, 2943] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2942 !! DELETE !! geometry deleted : check above for informations
+[323, 2944] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2943 !! DELETE !! geometry deleted : check above for informations
+[324, 2945] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2944 !! DELETE !! geometry deleted : check above for informations
+[325, 2961] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2960 !! DELETE !! geometry deleted : check above for informations
+[326, 2947] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2946 !! DELETE !! geometry deleted : check above for informations
+[327, 2948] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2947 !! DELETE !! geometry deleted : check above for informations
+[328, 2949] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2948 !! DELETE !! geometry deleted : check above for informations
+[329, 2950] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2949 !! DELETE !! geometry deleted : check above for informations
+[330, 2951] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2950 !! DELETE !! geometry deleted : check above for informations
+[331, 2952] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2951 !! DELETE !! geometry deleted : check above for informations
+[332, 2953] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2952 !! DELETE !! geometry deleted : check above for informations
+[333, 2954] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2953 !! DELETE !! geometry deleted : check above for informations
+[334, 2955] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2954 !! DELETE !! geometry deleted : check above for informations
+[335, 2956] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2955 !! DELETE !! geometry deleted : check above for informations
+[336, 2957] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2956 !! DELETE !! geometry deleted : check above for informations
+[337, 2958] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2957 !! DELETE !! geometry deleted : check above for informations
+[338, 2959] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2958 !! DELETE !! geometry deleted : check above for informations
+[339, 2962] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2961 !! DELETE !! geometry deleted : check above for informations
+[340, 2963] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2962 !! DELETE !! geometry deleted : check above for informations
+[341, 2964] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2963 !! DELETE !! geometry deleted : check above for informations
+[342, 2965] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2964 !! DELETE !! geometry deleted : check above for informations
+[343, 2966] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2965 !! DELETE !! geometry deleted : check above for informations
+[344, 2968] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2967 !! DELETE !! geometry deleted : check above for informations
+[345, 2969] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2968 !! DELETE !! geometry deleted : check above for informations
+[346, 2971] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2970 !! DELETE !! geometry deleted : check above for informations
+[347, 2975] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2974 !! DELETE !! geometry deleted : check above for informations
+[348, 2976] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2975 !! DELETE !! geometry deleted : check above for informations
+[349, 2977] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2976 !! DELETE !! geometry deleted : check above for informations
+[350, 2970] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2969 !! DELETE !! geometry deleted : check above for informations
+[351, 2972] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2971 !! DELETE !! geometry deleted : check above for informations
+[352, 2973] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2972 !! DELETE !! geometry deleted : check above for informations
+[353, 2978] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2977 !! DELETE !! geometry deleted : check above for informations
+[354, 2979] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2978 !! DELETE !! geometry deleted : check above for informations
+[356, 2980] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2979 !! DELETE !! geometry deleted : check above for informations
+[357, 2981] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2980 !! DELETE !! geometry deleted : check above for informations
+[358, 2982] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2981 !! DELETE !! geometry deleted : check above for informations
+[359, 2983] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2982 !! DELETE !! geometry deleted : check above for informations
+[360, 2995] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2994 !! DELETE !! geometry deleted : check above for informations
+[361, 2984] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2983 !! DELETE !! geometry deleted : check above for informations
+[362, 2986] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2985 !! DELETE !! geometry deleted : check above for informations
+[363, 2987] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2986 !! DELETE !! geometry deleted : check above for informations
+[364, 3008] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3007 !! DELETE !! geometry deleted : check above for informations
+[365, 2988] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2987 !! DELETE !! geometry deleted : check above for informations
+[366, 2989] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2988 !! DELETE !! geometry deleted : check above for informations
+[367, 2992] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2991 !! DELETE !! geometry deleted : check above for informations
+[368, 2993] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2992 !! DELETE !! geometry deleted : check above for informations
+[369, 2994] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2993 !! DELETE !! geometry deleted : check above for informations
+[370, 2996] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2995 !! DELETE !! geometry deleted : check above for informations
+[371, 2985] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2984 !! DELETE !! geometry deleted : check above for informations
+[372, 2990] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2989 !! DELETE !! geometry deleted : check above for informations
+[373, 2946] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2945 !! DELETE !! geometry deleted : check above for informations
+[374, 2974] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2973 !! DELETE !! geometry deleted : check above for informations
+[375, 2991] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2990 !! DELETE !! geometry deleted : check above for informations
+[376, 3851] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3850 !! DELETE !! geometry deleted : check above for informations
+[377, 2998] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2997 !! DELETE !! geometry deleted : check above for informations
+[378, 2999] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2998 !! DELETE !! geometry deleted : check above for informations
+[379, 3000] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2999 !! DELETE !! geometry deleted : check above for informations
+[380, 3001] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3000 !! DELETE !! geometry deleted : check above for informations
+[381, 3002] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3001 !! DELETE !! geometry deleted : check above for informations
+[382, 3003] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3002 !! DELETE !! geometry deleted : check above for informations
+[384, 3005] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3004 !! DELETE !! geometry deleted : check above for informations
+[385, 3006] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3005 !! DELETE !! geometry deleted : check above for informations
+[386, 3007] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3006 !! DELETE !! geometry deleted : check above for informations
+[387, 3026] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3025 !! DELETE !! geometry deleted : check above for informations
+[388, 3009] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3008 !! DELETE !! geometry deleted : check above for informations
+[389, 3010] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3009 !! DELETE !! geometry deleted : check above for informations
+[390, 3011] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3010 !! DELETE !! geometry deleted : check above for informations
+[391, 3012] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3011 !! DELETE !! geometry deleted : check above for informations
+[392, 3013] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3012 !! DELETE !! geometry deleted : check above for informations
+[393, 3014] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3013 !! DELETE !! geometry deleted : check above for informations
+[394, 3015] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3014 !! DELETE !! geometry deleted : check above for informations
+[395, 3016] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3015 !! DELETE !! geometry deleted : check above for informations
+[396, 3017] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3016 !! DELETE !! geometry deleted : check above for informations
+[397, 3018] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3017 !! DELETE !! geometry deleted : check above for informations
+[398, 3019] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3018 !! DELETE !! geometry deleted : check above for informations
+[399, 3020] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3019 !! DELETE !! geometry deleted : check above for informations
+[400, 3021] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3020 !! DELETE !! geometry deleted : check above for informations
+[401, 3022] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3021 !! DELETE !! geometry deleted : check above for informations
+[402, 3023] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3022 !! DELETE !! geometry deleted : check above for informations
+[403, 3024] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3023 !! DELETE !! geometry deleted : check above for informations
+[404, 3025] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3024 !! DELETE !! geometry deleted : check above for informations
+[405, 3027] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3026 !! DELETE !! geometry deleted : check above for informations
+[406, 3028] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3027 !! DELETE !! geometry deleted : check above for informations
+[407, 3029] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3028 !! DELETE !! geometry deleted : check above for informations
+[408, 3030] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3029 !! DELETE !! geometry deleted : check above for informations
+[409, 2890] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2889 !! DELETE !! geometry deleted : check above for informations
+[410, 3031] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3030 !! DELETE !! geometry deleted : check above for informations
+[411, 3032] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3031 !! DELETE !! geometry deleted : check above for informations
+[413, 3033] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3032 !! DELETE !! geometry deleted : check above for informations
+[414, 3034] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3033 !! DELETE !! geometry deleted : check above for informations
+[415, 2893] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+2892 !! DELETE !! geometry deleted : check above for informations
+[416, 3035] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3034 !! DELETE !! geometry deleted : check above for informations
+[417, 3036] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3035 !! DELETE !! geometry deleted : check above for informations
+[418, 3038] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3037 !! DELETE !! geometry deleted : check above for informations
+[419, 3039] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3038 !! DELETE !! geometry deleted : check above for informations
+[420, 3040] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3039 !! DELETE !! geometry deleted : check above for informations
+[421, 3041] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3040 !! DELETE !! geometry deleted : check above for informations
+[422, 3042] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3041 !! DELETE !! geometry deleted : check above for informations
+[423, 3043] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3042 !! DELETE !! geometry deleted : check above for informations
+[424, 3044] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3043 !! DELETE !! geometry deleted : check above for informations
+[425, 3045] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3044 !! DELETE !! geometry deleted : check above for informations
+[426, 3046] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3045 !! DELETE !! geometry deleted : check above for informations
+[427, 3047] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3046 !! DELETE !! geometry deleted : check above for informations
+[428, 3048] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3047 !! DELETE !! geometry deleted : check above for informations
+[429, 3037] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3036 !! DELETE !! geometry deleted : check above for informations
+[430, 538] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+537 !! DELETE !! geometry deleted : check above for informations
+[431, 3049] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3048 !! DELETE !! geometry deleted : check above for informations
+[432, 3050] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3049 !! DELETE !! geometry deleted : check above for informations
+[433, 3051] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3050 !! DELETE !! geometry deleted : check above for informations
+[434, 3052] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3051 !! DELETE !! geometry deleted : check above for informations
+[435, 3054] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3053 !! DELETE !! geometry deleted : check above for informations
+[436, 3053] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3052 !! DELETE !! geometry deleted : check above for informations
+[437, 3055] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3054 !! DELETE !! geometry deleted : check above for informations
+[438, 3056] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3055 !! DELETE !! geometry deleted : check above for informations
+[439, 3057] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3056 !! DELETE !! geometry deleted : check above for informations
+[440, 3058] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3057 !! DELETE !! geometry deleted : check above for informations
+[441, 3059] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3058 !! DELETE !! geometry deleted : check above for informations
+[442, 3060] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3059 !! DELETE !! geometry deleted : check above for informations
+[443, 3061] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3060 !! DELETE !! geometry deleted : check above for informations
+[444, 3062] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3061 !! DELETE !! geometry deleted : check above for informations
+[445, 3063] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3062 !! DELETE !! geometry deleted : check above for informations
+[446, 3064] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3063 !! DELETE !! geometry deleted : check above for informations
+[447, 3065] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3064 !! DELETE !! geometry deleted : check above for informations
+[448, 3066] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3065 !! DELETE !! geometry deleted : check above for informations
+[449, 3067] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3066 !! DELETE !! geometry deleted : check above for informations
+[450, 3068] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3067 !! DELETE !! geometry deleted : check above for informations
+[451, 3075] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3074 !! DELETE !! geometry deleted : check above for informations
+[452, 3069] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3068 !! DELETE !! geometry deleted : check above for informations
+[453, 3070] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3069 !! DELETE !! geometry deleted : check above for informations
+[454, 3071] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3070 !! DELETE !! geometry deleted : check above for informations
+[455, 3076] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3075 !! DELETE !! geometry deleted : check above for informations
+[456, 3077] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3076 !! DELETE !! geometry deleted : check above for informations
+[458, 3072] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3071 !! DELETE !! geometry deleted : check above for informations
+[459, 3073] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3072 !! DELETE !! geometry deleted : check above for informations
+[460, 3074] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3073 !! DELETE !! geometry deleted : check above for informations
+[462, 3080] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3079 !! DELETE !! geometry deleted : check above for informations
+[463, 3081] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3080 !! DELETE !! geometry deleted : check above for informations
+[464, 3082] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3081 !! DELETE !! geometry deleted : check above for informations
+[465, 3079] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3078 !! DELETE !! geometry deleted : check above for informations
+[466, 3083] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3082 !! DELETE !! geometry deleted : check above for informations
+[467, 3084] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3083 !! DELETE !! geometry deleted : check above for informations
+[468, 3085] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3084 !! DELETE !! geometry deleted : check above for informations
+[469, 3087] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3086 !! DELETE !! geometry deleted : check above for informations
+[470, 3088] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3087 !! DELETE !! geometry deleted : check above for informations
+[471, 3089] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3088 !! DELETE !! geometry deleted : check above for informations
+[472, 3090] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3089 !! DELETE !! geometry deleted : check above for informations
+[473, 3091] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3090 !! DELETE !! geometry deleted : check above for informations
+[474, 3092] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3091 !! DELETE !! geometry deleted : check above for informations
+[475, 3093] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3092 !! DELETE !! geometry deleted : check above for informations
+[476, 3094] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3093 !! DELETE !! geometry deleted : check above for informations
+[477, 3095] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3094 !! DELETE !! geometry deleted : check above for informations
+[478, 3096] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3095 !! DELETE !! geometry deleted : check above for informations
+[479, 3097] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3096 !! DELETE !! geometry deleted : check above for informations
+[480, 3098] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3097 !! DELETE !! geometry deleted : check above for informations
+[481, 3099] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3098 !! DELETE !! geometry deleted : check above for informations
+[482, 3100] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3099 !! DELETE !! geometry deleted : check above for informations
+[483, 3101] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3100 !! DELETE !! geometry deleted : check above for informations
+[484, 3102] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3101 !! DELETE !! geometry deleted : check above for informations
+[485, 3103] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3102 !! DELETE !! geometry deleted : check above for informations
+[486, 3104] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3103 !! DELETE !! geometry deleted : check above for informations
+[487, 3105] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3104 !! DELETE !! geometry deleted : check above for informations
+[488, 3106] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3105 !! DELETE !! geometry deleted : check above for informations
+[489, 3107] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3106 !! DELETE !! geometry deleted : check above for informations
+[490, 3086] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3085 !! DELETE !! geometry deleted : check above for informations
+[491, 3108] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3107 !! DELETE !! geometry deleted : check above for informations
+[492, 3109] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3108 !! DELETE !! geometry deleted : check above for informations
+[493, 3110] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3109 !! DELETE !! geometry deleted : check above for informations
+[494, 3111] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3110 !! DELETE !! geometry deleted : check above for informations
+[495, 3112] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3111 !! DELETE !! geometry deleted : check above for informations
+[496, 3113] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3112 !! DELETE !! geometry deleted : check above for informations
+[497, 3122] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3121 !! DELETE !! geometry deleted : check above for informations
+[498, 3114] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3113 !! DELETE !! geometry deleted : check above for informations
+[499, 3115] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3114 !! DELETE !! geometry deleted : check above for informations
+[500, 1726] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+1725 !! DELETE !! geometry deleted : check above for informations
+[501, 3116] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3115 !! DELETE !! geometry deleted : check above for informations
+[502, 3117] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3116 !! DELETE !! geometry deleted : check above for informations
+[504, 3118] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3117 !! DELETE !! geometry deleted : check above for informations
+[505, 3119] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3118 !! DELETE !! geometry deleted : check above for informations
+[506, 3121] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3120 !! DELETE !! geometry deleted : check above for informations
+[508, 3123] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3122 !! DELETE !! geometry deleted : check above for informations
+[509, 3829] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3828 !! DELETE !! geometry deleted : check above for informations
+[510, 3830] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3829 !! DELETE !! geometry deleted : check above for informations
+[515, 3832] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3831 !! DELETE !! geometry deleted : check above for informations
+[516, 3833] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3832 !! DELETE !! geometry deleted : check above for informations
+[517, 3838] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3837 !! DELETE !! geometry deleted : check above for informations
+[519, 3834] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3833 !! DELETE !! geometry deleted : check above for informations
+[520, 3835] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3834 !! DELETE !! geometry deleted : check above for informations
+[521, 3836] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3835 !! DELETE !! geometry deleted : check above for informations
+[522, 3837] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3836 !! DELETE !! geometry deleted : check above for informations
+[523, 3839] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3838 !! DELETE !! geometry deleted : check above for informations
+[524, 3840] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3839 !! DELETE !! geometry deleted : check above for informations
+[527, 3844] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3843 !! DELETE !! geometry deleted : check above for informations
+[529, 3841] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3840 !! DELETE !! geometry deleted : check above for informations
+[530, 3842] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3841 !! DELETE !! geometry deleted : check above for informations
+[531, 3843] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3842 !! DELETE !! geometry deleted : check above for informations
+[532, 3845] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3844 !! DELETE !! geometry deleted : check above for informations
+[537, 3850] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3849 !! DELETE !! geometry deleted : check above for informations
+[540, 3846] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3845 !! DELETE !! geometry deleted : check above for informations
+[541, 3847] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3846 !! DELETE !! geometry deleted : check above for informations
+[542, 3848] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3847 !! DELETE !! geometry deleted : check above for informations
+[543, 3849] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3848 !! DELETE !! geometry deleted : check above for informations
+[822, 3852] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3851 !! DELETE !! geometry deleted : check above for informations
+[823, 3853] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3852 !! DELETE !! geometry deleted : check above for informations
+[824, 3854] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3853 !! DELETE !! geometry deleted : check above for informations
+[825, 3855] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3854 !! DELETE !! geometry deleted : check above for informations
+[826, 3856] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3855 !! DELETE !! geometry deleted : check above for informations
+[827, 3831] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3830 !! DELETE !! geometry deleted : check above for informations
+[833, 3857] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3856 !! DELETE !! geometry deleted : check above for informations
+[834, 3858] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3857 !! DELETE !! geometry deleted : check above for informations
+[835, 3859] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3858 !! DELETE !! geometry deleted : check above for informations
+[836, 3860] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3859 !! DELETE !! geometry deleted : check above for informations
+[837, 3861] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3860 !! DELETE !! geometry deleted : check above for informations
+[846, 3863] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3862 !! DELETE !! geometry deleted : check above for informations
+[847, 3864] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3863 !! DELETE !! geometry deleted : check above for informations
+[849, 3865] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3864 !! DELETE !! geometry deleted : check above for informations
+[975, 3825] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3824 !! DELETE !! geometry deleted : check above for informations
+[2421, 3824] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3823 !! DELETE !! geometry deleted : check above for informations
+[2997, 3827] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3826 !! DELETE !! geometry deleted : check above for informations
+[3004, 3828] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3827 !! DELETE !! geometry deleted : check above for informations
+[3133, 3822] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3821 !! DELETE !! geometry deleted : check above for informations
+[3142, 3821] !! WARNING !! same geometries at a same date were found on a same tile: check above for informations
+3820 !! DELETE !! geometry deleted : check above for informations
+------------------------------------------------
+%s Check if overlapping geometries at a same date are observed close to tile limits 
+------------------------------------------------
+117 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+134 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+135 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+143 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+755 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+756 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+762 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+1406 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+1412 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+1401 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2049 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2050 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2051 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2060 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+1998 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2313 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2694 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2687 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2691 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2814 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+3225 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+3195 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2954 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+2977 !! WARNING !! Intersection between geometry and tile limits were found : check above for informations
+------------------------------------------------
+%s Check if overlapping geometries at a same date are observed from a same tile 
+------------------------------------------------
+                               nom           province commune   surface  \
+21  SENTINEL2A_20231201_L2A_T58KGB  Province des Iles   LIFOU  1.508727   
+22  SENTINEL2A_20231201_L2A_T58KGB  Province des Iles   LIFOU  1.878418   
+
+                                             geometry       date_  \
+21  POLYGON ((540642.940 341959.510, 540682.920 34...  2023-12-01   
+22  POLYGON ((540414.580 341708.200, 540424.570 34...  2023-12-01   
+
+                          surface_id_h3 nom_court  ID  groupe_id  
+21  L2A_T58KGB_20231201_8f9f562d04cc823     58KGB  22        3.0  
+22  L2A_T58KGB_20231201_8f9f562d07a0c23     58KGB  23        3.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom           province commune   surface  \
+41   SENTINEL2A_20231221_L2A_T58KGB  Province des Iles   LIFOU  1.988199   
+802  SENTINEL2A_20231221_L2A_T58KGB  Province des Iles   LIFOU  2.287929   
+
+                                              geometry       date_  \
+41   POLYGON ((545881.840 343411.080, 545921.820 34...  2023-12-21   
+802  POLYGON ((545843.080 343210.930, 545863.070 34...  2023-12-21   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+41   L2A_T58KGB_20231221_8f9f5628b5832b6     58KGB   42        5.0  
+802  L2A_T58KGB_20231221_8f9f5628b434d9b     58KGB  803        5.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom      province       commune   surface  \
+47   SENTINEL2A_20231221_L2A_T58KGA  Province Sud  ILE DES PINS  1.109311   
+808  SENTINEL2A_20231221_L2A_T58KGA  Province Sud  ILE DES PINS  3.867583   
+
+                                              geometry       date_  \
+47   POLYGON ((548878.880 179588.910, 548918.870 17...  2023-12-21   
+808  POLYGON ((549516.880 179843.400, 549536.870 17...  2023-12-21   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+47   L2A_T58KGA_20231221_8f9f54a89a518c5     58KGA   48        6.0  
+808  L2A_T58KGA_20231221_8f9f54a89a01c08     58KGA  809        6.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                               nom      province       commune   surface  \
+72  SENTINEL2A_20231231_L2A_T58KGA  Province Sud  ILE DES PINS  3.597799   
+73  SENTINEL2A_20231231_L2A_T58KGA  Province Sud  ILE DES PINS  1.479095   
+
+                                             geometry       date_  \
+72  POLYGON ((548240.460 179394.400, 548290.440 17...  2023-12-31   
+73  POLYGON ((548251.810 179204.530, 548271.800 17...  2023-12-31   
+
+                          surface_id_h3 nom_court  ID  groupe_id  
+72  L2A_T58KGA_20231231_8f9f54ad4d550f5     58KGA  73       20.0  
+73  L2A_T58KGA_20231231_8f9f54af26db385     58KGA  74       20.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+238  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   1.121057   
+240  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  56.132955   
+
+                                              geometry       date_  \
+238  POLYGON ((231923.630 434788.090, 231933.630 43...  2023-12-22   
+240  POLYGON ((232312.680 434960.750, 232322.680 43...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+238  L2A_T58KDC_20231222_8f9e2d264a184e5     58KDC  239       74.0  
+240  L2A_T58KDC_20231222_8f9e2d264840c66     58KDC  241       74.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+273  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   3.563218   
+277  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  72.315618   
+278  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   5.174668   
+
+                                              geometry       date_  \
+273  POLYGON ((235375.820 427127.160, 235385.820 42...  2023-12-22   
+277  POLYGON ((235117.730 428336.030, 235137.740 42...  2023-12-22   
+278  POLYGON ((235115.710 427125.440, 235155.720 42...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+273  L2A_T58KDC_20231222_8f9e2d36b15b8f5     58KDC  274       77.0  
+277  L2A_T58KDC_20231222_8f9e2d36b0844f4     58KDC  278       77.0  
+278  L2A_T58KDC_20231222_8f9e2d36b06d1b4     58KDC  279       77.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+303  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   3.502995   
+306  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  14.852684   
+
+                                              geometry       date_  \
+303  POLYGON ((241799.980 416284.330, 241839.990 41...  2023-12-22   
+306  POLYGON ((241368.820 416431.570, 241398.830 41...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+303  L2A_T58KDC_20231222_8f9f5adb32b6aa1     58KDC  304       78.0  
+306  L2A_T58KDC_20231222_8f9f5adb3289514     58KDC  307       78.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+316  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA   4.493759   
+329  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  54.065192   
+
+                                              geometry       date_  \
+316  POLYGON ((238087.860 414829.360, 238167.890 41...  2023-12-22   
+329  POLYGON ((238418.190 414801.510, 238468.210 41...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+316  L2A_T58KDC_20231222_8f9f5ad805637ab     58KDC  317       79.0  
+329  L2A_T58KDC_20231222_8f9f5ad80c30a20     58KDC  330       79.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+320  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  2.392012   
+331  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  6.755668   
+
+                                              geometry       date_  \
+320  POLYGON ((240983.140 414218.060, 240993.150 41...  2023-12-22   
+331  POLYGON ((240945.030 413927.680, 240965.040 41...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+320  L2A_T58KDC_20231222_8f9f5adb164d443     58KDC  321       80.0  
+331  L2A_T58KDC_20231222_8f9f5adb1288251     58KDC  332       80.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+324  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  14.742206   
+339  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  33.427508   
+
+                                              geometry       date_  \
+324  POLYGON ((236180.980 414226.580, 236190.980 41...  2023-12-22   
+339  POLYGON ((236525.050 413628.580, 236545.060 41...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+324  L2A_T58KDC_20231222_8f9f5ad8026cd14     58KDC  325       81.0  
+339  L2A_T58KDC_20231222_8f9f5ad81d29981     58KDC  340       81.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+348  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  3.903261   
+351  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  OUEGOA  9.708111   
+
+                                              geometry       date_  \
+348  POLYGON ((246449.130 410612.210, 246609.200 41...  2023-12-22   
+351  POLYGON ((246789.270 410614.430, 246809.280 41...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+348  L2A_T58KDC_20231222_8f9e2da5b52a783     58KDC  349       82.0  
+351  L2A_T58KDC_20231222_8f9e2da5bc9d2a4     58KDC  352       82.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province    commune   surface  \
+398  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  5.324232   
+399  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  1.961557   
+
+                                              geometry       date_  \
+398  POLYGON ((261614.830 396894.930, 261634.840 39...  2023-12-22   
+399  POLYGON ((261966.780 396617.100, 261986.780 39...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+398  L2A_T58KDC_20231222_8f9e2db580346a6     58KDC  399       84.0  
+399  L2A_T58KDC_20231222_8f9e2db581359a6     58KDC  400       84.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province    commune   surface  \
+429  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  2.712122   
+430  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  1.541205   
+
+                                              geometry       date_  \
+429  POLYGON ((268658.770 392098.490, 268678.780 39...  2023-12-22   
+430  POLYGON ((268409.260 392006.840, 268419.260 39...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+429  L2A_T58KDC_20231222_8f9e2db46d8b575     58KDC  430       86.0  
+430  L2A_T58KDC_20231222_8f9e2db46c1e970     58KDC  431       86.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province    commune   surface  \
+447  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  3.732826   
+448  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  HIENGHENE  1.341014   
+
+                                              geometry       date_  \
+447  POLYGON ((256633.840 390560.070, 256643.840 39...  2023-12-22   
+448  POLYGON ((256664.630 390440.220, 256684.630 39...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+447  L2A_T58KDC_20231222_8f9e2db49c1bc51     58KDC  448       87.0  
+448  L2A_T58KDC_20231222_8f9e2db49c0ba4a     58KDC  449       87.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province      commune   surface  \
+471  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  KAALA GOMEN  8.826251   
+472  SENTINEL2B_20231222_L2A_T58KDC  Province Nord  KAALA GOMEN  4.022845   
+
+                                              geometry       date_  \
+471  POLYGON ((241067.500 387527.740, 241487.640 38...  2023-12-22   
+472  POLYGON ((240997.480 387527.280, 241037.490 38...  2023-12-22   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+471  L2A_T58KDC_20231222_8f9f5e68aae58cd     58KDC  472       88.0  
+472  L2A_T58KDC_20231222_8f9f5e68bda400c     58KDC  473       88.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom      province commune   surface  \
+529  SENTINEL2A_20231214_L2A_T58KFB  Province Sud    THIO  2.680565   
+530  SENTINEL2A_20231214_L2A_T58KFB  Province Sud    THIO  6.081290   
+
+                                              geometry       date_  \
+529  POLYGON ((420708.340 290988.290, 420718.340 29...  2023-12-14   
+530  POLYGON ((420438.640 290936.550, 420448.640 29...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+529  L2A_T58KFB_20231214_8f9f502ec4e1c8d     58KFB  530       91.0  
+530  L2A_T58KFB_20231214_8f9f502ec7a4db5     58KFB  531       91.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province    commune   surface  \
+570  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  POUEMBOUT  1.290818   
+572  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  POUEMBOUT  1.080684   
+
+                                              geometry       date_  \
+570  POLYGON ((307615.540 343400.100, 307635.540 34...  2023-12-14   
+572  POLYGON ((307686.390 343270.500, 307706.400 34...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+570  L2A_T58KEB_20231214_8f9f5ecd42a4d88     58KEB  571      102.0  
+572  L2A_T58KEB_20231214_8f9f5ecd438cd4d     58KEB  573      102.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province      commune   surface  \
+588  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  PONERIHOUEN  3.682047   
+589  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  PONERIHOUEN  1.330740   
+
+                                              geometry       date_  \
+588  POLYGON ((350411.620 339891.210, 350421.620 33...  2023-12-14   
+589  POLYGON ((350363.070 339660.830, 350373.070 33...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+588  L2A_T58KEB_20231214_8f9f53ac2b04080     58KEB  589      103.0  
+589  L2A_T58KEB_20231214_8f9f53ac2b29973     58KEB  590      103.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province    commune   surface  \
+592  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  POUEMBOUT  4.732929   
+593  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  POUEMBOUT  2.291417   
+
+                                              geometry       date_  \
+592  POLYGON ((307293.270 335905.540, 307303.280 33...  2023-12-14   
+593  POLYGON ((307404.200 335766.200, 307464.220 33...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+592  L2A_T58KEB_20231214_8f9f5ece2034514     58KEB  593      104.0  
+593  L2A_T58KEB_20231214_8f9f5ece2114452     58KEB  594      104.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+607  SENTINEL2A_20231214_L2A_T58KEB  Province Nord    POYA  21.162506   
+609  SENTINEL2A_20231214_L2A_T58KEB  Province Nord    POYA   3.612130   
+610  SENTINEL2A_20231214_L2A_T58KEB  Province Nord    POYA  23.964141   
+
+                                              geometry       date_  \
+607  POLYGON ((320622.790 325687.300, 320632.790 32...  2023-12-14   
+609  POLYGON ((321226.270 325170.990, 321246.280 32...  2023-12-14   
+610  POLYGON ((321075.910 325220.040, 321085.920 32...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+607  L2A_T58KEB_20231214_8f9f5ec31b6642e     58KEB  608      105.0  
+609  L2A_T58KEB_20231214_8f9f5ec2243610a     58KEB  610      105.0  
+610  L2A_T58KEB_20231214_8f9f5ec2246370e     58KEB  611      105.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province  commune   surface  \
+649  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  2.210972   
+656  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  2.060907   
+
+                                              geometry       date_  \
+649  POLYGON ((375521.160 314263.800, 375541.170 31...  2023-12-14   
+656  POLYGON ((375382.470 314052.870, 375432.480 31...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+649  L2A_T58KEB_20231214_8f9f53b0111cce8     58KEB  650      106.0  
+656  L2A_T58KEB_20231214_8f9f53b01129043     58KEB  657      106.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province  commune    surface  \
+659  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  26.431768   
+663  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA   3.011333   
+
+                                              geometry       date_  \
+659  POLYGON ((373891.980 314073.380, 373911.980 31...  2023-12-14   
+663  POLYGON ((374535.810 313497.340, 374545.810 31...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+659  L2A_T58KEB_20231214_8f9f53b0cca415a     58KEB  660      107.0  
+663  L2A_T58KEB_20231214_8f9f53b01a703a5     58KEB  664      107.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province  commune   surface  \
+680  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  1.040451   
+681  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  1.060459   
+684  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  3.901690   
+
+                                              geometry       date_  \
+680  POLYGON ((376605.390 312070.180, 376645.400 31...  2023-12-14   
+681  POLYGON ((376815.560 312051.520, 376835.570 31...  2023-12-14   
+684  POLYGON ((376736.500 311900.980, 376756.510 31...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+680  L2A_T58KEB_20231214_8f9f53b05a1a82a     58KEB  681      108.0  
+681  L2A_T58KEB_20231214_8f9f53b05a16b1b     58KEB  682      108.0  
+684  L2A_T58KEB_20231214_8f9f53b05a23b2c     58KEB  685      108.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province  commune   surface  \
+701  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  3.331386   
+702  SENTINEL2A_20231214_L2A_T58KEB  Province Nord  KOUAOUA  9.644004   
+
+                                              geometry       date_  \
+701  POLYGON ((380471.320 308143.910, 380511.330 30...  2023-12-14   
+702  POLYGON ((380351.880 308053.130, 380361.880 30...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+701  L2A_T58KEB_20231214_8f9f53b25793706     58KEB  702      109.0  
+702  L2A_T58KEB_20231214_8f9f53b2545a6aa     58KEB  703      109.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+729  SENTINEL2A_20231214_L2A_T58KDB  Province Nord    KONE  2.881908   
+734  SENTINEL2A_20231214_L2A_T58KDB  Province Nord    KONE  2.931942   
+
+                                              geometry       date_  \
+729  POLYGON ((294444.110 353869.550, 294454.110 35...  2023-12-14   
+734  POLYGON ((294302.850 354058.710, 294312.850 35...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+729  L2A_T58KDB_20231214_8f9f5e554b16a4e     58KDB  730      110.0  
+734  L2A_T58KDB_20231214_8f9f5e554a30928     58KDB  735      110.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+731  SENTINEL2A_20231214_L2A_T58KDB  Province Nord    KONE   1.490987   
+738  SENTINEL2A_20231214_L2A_T58KDB  Province Nord    KONE  19.753059   
+
+                                              geometry       date_  \
+731  POLYGON ((294445.010 353729.510, 294485.020 35...  2023-12-14   
+738  POLYGON ((294175.110 353697.770, 294235.130 35...  2023-12-14   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+731  L2A_T58KDB_20231214_8f9f5e554b0010a     58KDB  732      111.0  
+738  L2A_T58KDB_20231214_8f9f5e5734dcca5     58KDB  739      111.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+855  SENTINEL2A_20231224_L2A_T58KDB  Province Nord    KONE   1.010656   
+859  SENTINEL2A_20231224_L2A_T58KDB  Province Nord    KONE  33.521727   
+
+                                              geometry       date_  \
+855  POLYGON ((286940.040 349409.960, 286950.050 34...  2023-12-24   
+859  POLYGON ((287159.920 349441.380, 287199.930 34...  2023-12-24   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+855  L2A_T58KDB_20231224_8f9f5e541b866a1     58KDB  856      113.0  
+859  L2A_T58KDB_20231224_8f9f5e541953c96     58KDB  860      113.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom      province commune    surface  \
+889  SENTINEL2A_20231224_L2A_T58KFA  Province Sud   PAITA   1.180317   
+897  SENTINEL2A_20231224_L2A_T58KFA  Province Sud   PAITA  74.119915   
+
+                                              geometry       date_  \
+889  POLYGON ((425175.160 240830.530, 425245.170 24...  2023-12-24   
+897  POLYGON ((425455.520 240782.370, 425465.520 24...  2023-12-24   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+889  L2A_T58KFA_20231224_8f9f51d1e04441a     58KFA  890      118.0  
+897  L2A_T58KFA_20231224_8f9f51d1eba4d9c     58KFA  898      118.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+946  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  2.952621   
+949  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  5.554917   
+
+                                              geometry       date_  \
+946  POLYGON ((237709.710 423660.880, 237719.720 42...  2023-12-27   
+949  POLYGON ((237482.180 423269.200, 237492.190 42...  2023-12-27   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+946  L2A_T58KDC_20231227_8f9e2d36dcd8841     58KDC  947      124.0  
+949  L2A_T58KDC_20231227_8f9e2d36d1a44eb     58KDC  950      124.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune    surface  \
+956  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  14.242285   
+958  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  13.611753   
+
+                                              geometry       date_  \
+956  POLYGON ((235920.470 420377.610, 235930.470 42...  2023-12-27   
+958  POLYGON ((236500.840 420361.410, 236520.840 42...  2023-12-27   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+956  L2A_T58KDC_20231227_8f9f5ad9ea116cd     58KDC  957      126.0  
+958  L2A_T58KDC_20231227_8f9f5ad9eba244a     58KDC  959      126.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                nom       province commune   surface  \
+992  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  1.241014   
+995  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  2.131741   
+998  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  2.181780   
+
+                                              geometry       date_  \
+992  POLYGON ((233142.420 413806.450, 233152.420 41...  2023-12-27   
+995  POLYGON ((233293.070 413717.400, 233313.080 41...  2023-12-27   
+998  POLYGON ((233374.350 413527.850, 233394.360 41...  2023-12-27   
+
+                           surface_id_h3 nom_court   ID  groupe_id  
+992  L2A_T58KDC_20231227_8f9f5ad8c4f1c2d     58KDC  993      128.0  
+995  L2A_T58KDC_20231227_8f9f5ad8c41d01d     58KDC  996      128.0  
+998  L2A_T58KDC_20231227_8f9f5ad8c4210d2     58KDC  999      128.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune  surface  \
+1005  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  1.57132   
+1007  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  OUEGOA  7.69647   
+
+                                               geometry       date_  \
+1005  POLYGON ((244466.380 412430.060, 244486.390 41...  2023-12-27   
+1007  POLYGON ((244636.520 412421.170, 244666.530 41...  2023-12-27   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1005  L2A_T58KDC_20231227_8f9f5adb542cc40     58KDC  1006      129.0  
+1007  L2A_T58KDC_20231227_8f9f5adb55006cd     58KDC  1008      129.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1031  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  3.382512   
+1032  SENTINEL2A_20231227_L2A_T58KDC  Province Nord  KOUMAC  2.942181   
+
+                                               geometry       date_  \
+1031  POLYGON ((219158.960 408902.330, 219178.960 40...  2023-12-27   
+1032  POLYGON ((218899.390 408820.580, 218919.400 40...  2023-12-27   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1031  L2A_T58KDC_20231227_8f9f5ac01518501     58KDC  1032      130.0  
+1032  L2A_T58KDC_20231227_8f9f5ac01553096     58KDC  1033      130.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1166  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA   3.883664   
+1169  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  33.321436   
+
+                                               geometry       date_  \
+1166  POLYGON ((232102.910 434909.340, 232122.920 43...  2023-12-02   
+1169  POLYGON ((232312.680 434960.750, 232322.680 43...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1166  L2A_T58KDC_20231202_8f9e2d264a16300     58KDC  1167      139.0  
+1169  L2A_T58KDC_20231202_8f9e2d26484064b     58KDC  1170      139.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1183  SENTINEL2B_20231202_L2A_T58KDC  Province Nord    POUM  4.664138   
+1184  SENTINEL2B_20231202_L2A_T58KDC  Province Nord    POUM  1.211073   
+
+                                               geometry       date_  \
+1183  POLYGON ((222593.130 431164.600, 222603.130 43...  2023-12-02   
+1184  POLYGON ((222636.000 430734.680, 222646.000 43...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1183  L2A_T58KDC_20231202_8f9f5ac9c4c101c     58KDC  1184      140.0  
+1184  L2A_T58KDC_20231202_8f9f5ac9c47340c     58KDC  1185      140.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune  surface  \
+1205  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  2.21189   
+1215  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  9.64823   
+
+                                               geometry       date_  \
+1205  POLYGON ((234053.390 419805.070, 234093.400 41...  2023-12-02   
+1215  POLYGON ((233903.460 419784.080, 233913.460 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1205  L2A_T58KDC_20231202_8f9f5ad9815c2d4     58KDC  1206      141.0  
+1215  L2A_T58KDC_20231202_8f9f5ad98a9594c     58KDC  1216      141.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1216  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  17.915377   
+1223  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  13.231366   
+
+                                               geometry       date_  \
+1216  POLYGON ((235594.080 419805.200, 235624.090 41...  2023-12-02   
+1223  POLYGON ((236175.370 419648.950, 236185.370 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1216  L2A_T58KDC_20231202_8f9f5ad9c6867a0     58KDC  1217      142.0  
+1223  L2A_T58KDC_20231202_8f9f5ad9eb60966     58KDC  1224      142.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1260  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  2.081747   
+1272  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  4.443722   
+
+                                               geometry       date_  \
+1260  POLYGON ((241256.990 413649.600, 241327.020 41...  2023-12-02   
+1272  POLYGON ((241147.730 413528.830, 241157.730 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1260  L2A_T58KDC_20231202_8f9f5adb12a6961     58KDC  1261      143.0  
+1272  L2A_T58KDC_20231202_8f9f5adb131a634     58KDC  1273      143.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1267  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  16.133488   
+1270  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA   6.685572   
+
+                                               geometry       date_  \
+1267  POLYGON ((239864.010 414010.640, 239884.020 41...  2023-12-02   
+1270  POLYGON ((239516.490 413608.190, 239526.500 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1267  L2A_T58KDC_20231202_8f9f5ad844d102c     58KDC  1268      144.0  
+1270  L2A_T58KDC_20231202_8f9f5ad8445d14a     58KDC  1271      144.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1279  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA   8.386973   
+1282  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  16.253538   
+
+                                               geometry       date_  \
+1279  POLYGON ((239910.320 413050.520, 239920.320 41...  2023-12-02   
+1282  POLYGON ((240040.110 413091.390, 240120.140 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1279  L2A_T58KDC_20231202_8f9f5ad8419e443     58KDC  1280      145.0  
+1282  L2A_T58KDC_20231202_8f9f5ad84cd4c4e     58KDC  1283      145.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1295  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  2.722261   
+1300  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  9.217651   
+
+                                               geometry       date_  \
+1295  POLYGON ((243083.490 411250.500, 243123.500 41...  2023-12-02   
+1300  POLYGON ((242651.750 411487.780, 242661.750 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1295  L2A_T58KDC_20231202_8f9f5adb5ac236e     58KDC  1296      146.0  
+1300  L2A_T58KDC_20231202_8f9f5adb536cb48     58KDC  1301      146.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1297  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA   2.482049   
+1298  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  OUEGOA  17.734632   
+
+                                               geometry       date_  \
+1297  POLYGON ((241212.880 411218.250, 241252.900 41...  2023-12-02   
+1298  POLYGON ((241080.610 411557.530, 241090.610 41...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1297  L2A_T58KDC_20231202_8f9f5ada20c1769     58KDC  1298      147.0  
+1298  L2A_T58KDC_20231202_8f9f5ada239a582     58KDC  1299      147.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1307  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  KOUMAC  1.130824   
+1308  SENTINEL2B_20231202_L2A_T58KDC  Province Nord  KOUMAC  1.871361   
+
+                                               geometry       date_  \
+1307  POLYGON ((217347.250 407539.830, 217397.260 40...  2023-12-02   
+1308  POLYGON ((217228.130 407398.990, 217238.130 40...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1307  L2A_T58KDC_20231202_8f9f5ac0cd99928     58KDC  1308      148.0  
+1308  L2A_T58KDC_20231202_8f9f5ac0cc36249     58KDC  1309      148.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1435  SENTINEL2B_20231202_L2A_T58KDB  Province Nord    KONE  2.571614   
+1449  SENTINEL2B_20231202_L2A_T58KDB  Province Nord    KONE  1.530961   
+
+                                               geometry       date_  \
+1435  POLYGON ((271829.590 345561.720, 271849.590 34...  2023-12-02   
+1449  POLYGON ((271958.850 345682.600, 271998.860 34...  2023-12-02   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1435  L2A_T58KDB_20231202_8f9f5e08038b05e     58KDB  1436      165.0  
+1449  L2A_T58KDB_20231202_8f9f5e0802a6491     58KDB  1450      165.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1467  SENTINEL2B_20231212_L2A_T58KCD  Province Nord   BELEP  5.455801   
+1468  SENTINEL2B_20231212_L2A_T58KCD  Province Nord   BELEP  1.861974   
+
+                                               geometry       date_  \
+1467  POLYGON ((158677.100 493210.330, 158687.110 49...  2023-12-12   
+1468  POLYGON ((158389.560 492838.100, 158409.570 49...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1467  L2A_T58KCD_20231212_8f9e29aecd2ca28     58KCD  1468      166.0  
+1468  L2A_T58KCD_20231212_8f9e29a526e8698     58KCD  1469      166.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1497  SENTINEL2B_20231212_L2A_T58KDC  Province Nord    POUM  3.032507   
+1499  SENTINEL2B_20231212_L2A_T58KDC  Province Nord    POUM  1.591313   
+
+                                               geometry       date_  \
+1497  POLYGON ((203609.590 433409.100, 203629.590 43...  2023-12-12   
+1499  POLYGON ((203440.390 433277.910, 203450.400 43...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1497  L2A_T58KDC_20231212_8f9f5a576533c24     58KDC  1498      167.0  
+1499  L2A_T58KDC_20231212_8f9f5a57652c416     58KDC  1500      167.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1547  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA   3.483008   
+1563  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  30.606334   
+
+                                               geometry       date_  \
+1547  POLYGON ((236110.480 420388.860, 236130.490 42...  2023-12-12   
+1563  POLYGON ((235779.880 420456.720, 235789.890 42...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1547  L2A_T58KDC_20231212_8f9f5ad9ea8cc9d     58KDC  1548      168.0  
+1563  L2A_T58KDC_20231212_8f9f5ad9eb5022d     58KDC  1564      168.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1550  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  5.394550   
+1552  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  7.186069   
+
+                                               geometry       date_  \
+1550  POLYGON ((229778.240 420297.150, 229788.240 42...  2023-12-12   
+1552  POLYGON ((230168.200 420329.730, 230188.200 42...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1550  L2A_T58KDC_20231212_8f9f5aca6b81954     58KDC  1551      169.0  
+1552  L2A_T58KDC_20231212_8f9f5aca68e9d2b     58KDC  1553      169.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1587  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA   3.292815   
+1588  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  19.927026   
+
+                                               geometry       date_  \
+1587  POLYGON ((241819.720 416324.480, 241839.730 41...  2023-12-12   
+1588  POLYGON ((241378.690 416451.650, 241418.710 41...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1587  L2A_T58KDC_20231212_8f9f5adb32b60de     58KDC  1588      170.0  
+1588  L2A_T58KDC_20231212_8f9f5adb328a1aa     58KDC  1589      170.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1634  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA   5.604693   
+1636  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  10.909153   
+
+                                               geometry       date_  \
+1634  POLYGON ((243716.740 412325.110, 243726.740 41...  2023-12-12   
+1636  POLYGON ((243885.240 412566.320, 243925.250 41...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1634  L2A_T58KDC_20231212_8f9f5adb57282ec     58KDC  1635      171.0  
+1636  L2A_T58KDC_20231212_8f9f5adb544d285     58KDC  1637      171.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+1643  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  17.984908   
+1645  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA   3.723080   
+
+                                               geometry       date_  \
+1643  POLYGON ((241728.900 411861.910, 241738.900 41...  2023-12-12   
+1645  POLYGON ((241832.670 411292.340, 241842.670 41...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1643  L2A_T58KDC_20231212_8f9f5ada2441a08     58KDC  1644      172.0  
+1645  L2A_T58KDC_20231212_8f9f5ada219ec8b     58KDC  1646      172.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1648  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  1.040860   
+1656  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  9.637968   
+
+                                               geometry       date_  \
+1648  POLYGON ((242114.940 410964.040, 242124.940 41...  2023-12-12   
+1656  POLYGON ((242464.550 411046.360, 242494.560 41...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1648  L2A_T58KDC_20231212_8f9f5ada2c58b25     58KDC  1649      173.0  
+1656  L2A_T58KDC_20231212_8f9f5ada2c0db68     58KDC  1657      173.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1659  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  2.822314   
+1665  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  1.741426   
+
+                                               geometry       date_  \
+1659  POLYGON ((240577.150 410523.790, 240597.160 41...  2023-12-12   
+1665  POLYGON ((240458.350 410332.930, 240518.370 41...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1659  L2A_T58KDC_20231212_8f9f5ada23611b5     58KDC  1660      174.0  
+1665  L2A_T58KDC_20231212_8f9f5ada3d82920     58KDC  1666      174.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+1720  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  9.077359   
+1724  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  OUEGOA  3.212602   
+
+                                               geometry       date_  \
+1720  POLYGON ((254143.300 402808.960, 254163.310 40...  2023-12-12   
+1724  POLYGON ((254475.180 402541.000, 254495.190 40...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1720  L2A_T58KDC_20231212_8f9e2da46811c1b     58KDC  1721      175.0  
+1724  L2A_T58KDC_20231212_8f9e2da4691c74b     58KDC  1725      175.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province    commune   surface  \
+1782  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  HIENGHENE  1.651314   
+1799  SENTINEL2B_20231212_L2A_T58KDC  Province Nord  HIENGHENE  8.116452   
+
+                                               geometry       date_  \
+1782  POLYGON ((261433.460 397093.840, 261443.470 39...  2023-12-12   
+1799  POLYGON ((261613.920 397034.990, 261633.930 39...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+1782  L2A_T58KDC_20231212_8f9e2db580f054a     58KDC  1783      176.0  
+1799  L2A_T58KDC_20231212_8f9e2db581ad459     58KDC  1800      176.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+2206  SENTINEL2B_20231212_L2A_T58KDB  Province Nord    KONE  3.842421   
+2211  SENTINEL2B_20231212_L2A_T58KDB  Province Nord    KONE  1.350850   
+
+                                               geometry       date_  \
+2206  POLYGON ((271581.420 346820.550, 271591.420 34...  2023-12-12   
+2211  POLYGON ((271462.860 346589.710, 271472.860 34...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2206  L2A_T58KDB_20231212_8f9f5e083d51973     58KDB  2207      250.0  
+2211  L2A_T58KDB_20231212_8f9f5e0838b1d50     58KDB  2212      250.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+2226  SENTINEL2B_20231212_L2A_T58KDB  Province Nord    KONE  1.100690   
+2227  SENTINEL2B_20231212_L2A_T58KDB  Province Nord    KONE  1.150722   
+
+                                               geometry       date_  \
+2226  POLYGON ((271227.800 345807.940, 271247.810 34...  2023-12-12   
+2227  POLYGON ((271319.120 345608.460, 271339.120 34...  2023-12-12   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2226  L2A_T58KDB_20231212_8f9f5e083961455     58KDB  2227      251.0  
+2227  L2A_T58KDB_20231212_8f9f5e0802c9c4e     58KDB  2228      251.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom      province commune    surface  \
+2360  SENTINEL2B_20231219_L2A_T58KFB  Province Sud    THIO  21.666126   
+2383  SENTINEL2B_20231219_L2A_T58KFB  Province Sud    THIO   2.990843   
+
+                                               geometry       date_  \
+2360  POLYGON ((410268.060 278379.230, 410288.060 27...  2023-12-19   
+2383  POLYGON ((410472.600 277680.440, 410502.610 27...  2023-12-19   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2360  L2A_T58KFB_20231219_8f9f5024d24bd50     58KFB  2361      272.0  
+2383  L2A_T58KFB_20231219_8f9f51532c96af3     58KFB  2384      272.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom      province commune    surface  \
+2388  SENTINEL2B_20231219_L2A_T58KFB  Province Sud    THIO   2.530697   
+2389  SENTINEL2B_20231219_L2A_T58KFB  Province Sud    THIO   1.920534   
+2390  SENTINEL2B_20231219_L2A_T58KFB  Province Sud    THIO  68.508557   
+
+                                               geometry       date_  \
+2388  POLYGON ((411654.940 277348.020, 411674.940 27...  2023-12-19   
+2389  POLYGON ((411225.730 277215.230, 411235.730 27...  2023-12-19   
+2390  POLYGON ((412217.510 278511.840, 412227.510 27...  2023-12-19   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2388  L2A_T58KFB_20231219_8f9f5024db95ca6     58KFB  2389      277.0  
+2389  L2A_T58KFB_20231219_8f9f5024da022d6     58KFB  2390      277.0  
+2390  L2A_T58KFB_20231219_8f9f5024dc46359     58KFB  2391      277.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+2577  SENTINEL2B_20231219_L2A_T58KEB  Province Nord  CANALA  3.591241   
+2579  SENTINEL2B_20231219_L2A_T58KEB  Province Nord  CANALA  4.411518   
+
+                                               geometry       date_  \
+2577  POLYGON ((396073.510 292680.430, 396093.520 29...  2023-12-19   
+2579  POLYGON ((396384.010 292612.410, 396394.010 29...  2023-12-19   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2577  L2A_T58KEB_20231219_8f9f5158bb0e8e4     58KEB  2578      261.0  
+2579  L2A_T58KEB_20231219_8f9f51589498412     58KEB  2580      261.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province    commune   surface  \
+2761  SENTINEL2B_20231229_L2A_T58KEC  Province Nord  POINDIMIE  1.260871   
+2762  SENTINEL2B_20231229_L2A_T58KEC  Province Nord  POINDIMIE  2.531749   
+
+                                               geometry       date_  \
+2761  POLYGON ((323244.730 369518.760, 323254.730 36...  2023-12-29   
+2762  POLYGON ((323384.770 369519.650, 323414.780 36...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2761  L2A_T58KEC_20231229_8f9f5325366c2ae     58KEC  2762      306.0  
+2762  L2A_T58KEC_20231229_8f9f53253759149     58KEC  2763      306.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom      province commune   surface  \
+2832  SENTINEL2B_20231229_L2A_T58KFB  Province Sud    THIO  1.050271   
+2837  SENTINEL2B_20231229_L2A_T58KFB  Province Sud    THIO  1.660428   
+
+                                               geometry       date_  \
+2832  POLYGON ((413535.010 283581.110, 413545.010 28...  2023-12-29   
+2837  POLYGON ((413486.170 283400.770, 413496.170 28...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+2832  L2A_T58KFB_20231229_8f9f5025d243603     58KFB  2833      327.0  
+2837  L2A_T58KFB_20231229_8f9f5025d260b5d     58KFB  2838      327.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province  commune   surface  \
+3019  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  1.040434   
+3043  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  7.563147   
+
+                                               geometry       date_  \
+3019  POLYGON ((380930.870 312937.940, 380940.880 31...  2023-12-29   
+3043  POLYGON ((380851.310 312867.420, 380861.310 31...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+3019  L2A_T58KEB_20231229_8f9f53b226f6b2b     58KEB  3020      386.0  
+3043  L2A_T58KEB_20231229_8f9f53b226046f0     58KEB  3044      386.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province  commune   surface  \
+3038  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  1.370560   
+3052  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  KOUAOUA  1.580647   
+
+                                               geometry       date_  \
+3038  POLYGON ((382080.010 305273.530, 382110.010 30...  2023-12-29   
+3052  POLYGON ((381970.500 305192.810, 381980.500 30...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+3038  L2A_T58KEB_20231229_8f9f5148b31252c     58KEB  3039      389.0  
+3052  L2A_T58KEB_20231229_8f9f5148b31d912     58KEB  3053      389.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune   surface  \
+3075  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  CANALA  2.520962   
+3076  SENTINEL2B_20231229_L2A_T58KEB  Province Nord  CANALA  2.290876   
+
+                                               geometry       date_  \
+3075  POLYGON ((388219.230 296220.810, 388239.230 29...  2023-12-29   
+3076  POLYGON ((388009.450 296179.460, 388069.460 29...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+3075  L2A_T58KEB_20231229_8f9f514ad4220c2     58KEB  3076      391.0  
+3076  L2A_T58KEB_20231229_8f9f514ad42bb9c     58KEB  3077      391.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+3150  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE  85.165226   
+3186  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE   3.672378   
+
+                                               geometry       date_  \
+3150  POLYGON ((287576.010 350074.260, 287596.010 35...  2023-12-29   
+3186  POLYGON ((286942.480 349029.840, 286952.480 34...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+3150  L2A_T58KDB_20231229_8f9f5e54180c8f6     58KDB  3151      392.0  
+3186  L2A_T58KDB_20231229_8f9f5e541b22cd8     58KDB  3187      392.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
+                                 nom       province commune    surface  \
+3168  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE   4.923230   
+3173  SENTINEL2B_20231229_L2A_T58KDB  Province Nord    KONE  22.354641   
+
+                                               geometry       date_  \
+3168  POLYGON ((294578.290 351659.640, 294588.300 35...  2023-12-29   
+3173  POLYGON ((294820.090 351391.090, 294830.100 35...  2023-12-29   
+
+                            surface_id_h3 nom_court    ID  groupe_id  
+3168  L2A_T58KDB_20231229_8f9f5e57380c484     58KDB  3169      393.0  
+3173  L2A_T58KDB_20231229_8f9f5e57028b253     58KDB  3174      393.0   !! WARNING !! overlapping geometries at a same date were found on a same tile : check above for informations
