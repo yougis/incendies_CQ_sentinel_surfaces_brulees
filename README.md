@@ -65,7 +65,7 @@ L'objectif du dashboard est d'identifer de possible manquement de détection dû
 ---------------------------------------------------------------------------------
 
 Pour identifer la présence de nuage ou de voile nuageux à l'échelle de la forme, un calcul réalisé à partir de la bande SCL des images Sentinel-2 est réalisé.
-Ce calcul utilise les classes [3, 8, 9, 10, 11] correspondant indépendamment à ???
+Ce calcul utilise les classes [3, 8, 9, 10, 11] correspondant indépendamment à [Cloud Shadow, Cloud medium probability, Cloud high probability, Thin cirrus, Snow or ice]
 
 Si à l'echelle de la forme le pourcentage de cloud cover calculé est supérieur à 0% alors la forme est supprimée de la base de données.  
 Pour récupérer les valeurs de bandes SCL pour chaque forme à la date de détection, il est nécessaire d'utliser un catalogue STAC (ici Amazone) la requête de recherche et de récupération du array étant longue, le script a été parallélisé grâce à dask
