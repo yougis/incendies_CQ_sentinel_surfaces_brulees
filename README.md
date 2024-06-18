@@ -27,5 +27,20 @@ Les données téléchargées sont au format .gpkg et stockées dans le lecteur r
 ## [3] Dashboard de contrôle des données : 03_Dashboard_controle.ipynb
 ---------------------------------------------------------------------------------
 
-## [4] Dashboard de contrôle des données : 03_Dashboard_controle.ipynb
+Ce dashboard utilise la technologie Panel pour générer les widgets et les appels de widget. Il n'est pas déployé car nécessite une application de fond telle que (Azure, )
+Il permet de visualiser plusieurs choses :  
+
+Premièrement :  
+
+- Des chiffres clés tels que le nombre de détection, mono-détection, pluri-détections et les surfaces associées à chaque groupes.  
+- Un tableau des mêmes groupes mais pour chaque tuile 
+- Une carte pour localiser les densités de surface détectées selon la localisation en nécessite
+
+Deuxièmement :  
+- Selon la sélection de la tuile une graphique en barre s'affichera avec dessus, le nombre de détection Sentinel-2, Viirs SNPP et Viirs NOAA-20 sur la période choisie
+- Un plot associé au graph précédent avec les valeurs de cloud cover pour chacun des passages Sentinel-2
+- Une série d'image tumbnail Sentinel-2 sur la période et la tuile choisie, permet de vérifier la qualité d'une image 
+
+L'objectif du dashboard est d'identifer de possible manquement de détection dû à un manque d'image source (Théia) ou un bug de l'algorithme de détection si aucune surface est détectées alors qu'il y a présence de points chauds Viirs et/ou des images de bonnes qualitées.
+## [4] Identification des polygones avec des nuages : 04_Cloud_cover_SCL_detection.ipynb
 ---------------------------------------------------------------------------------
