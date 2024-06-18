@@ -2,7 +2,7 @@
 # Articulation du projet de Contrôle/Qualité des données de surfaces brûlées
 ---------------------------------------------------------------------------------- 
 
-## [1] Récupération des données données de surfaces brûlées Sentinel-2
+## [1] Récupération des données de surfaces brûlées Sentinel-2 : 01_Recup_data_Sentinel2.ipynb
 ---------------------------------------------------------------------------------- 
 
 Pour récupérer automatiquement les données de surfaces brûlées il est actuellement utilisé la méthode "crontab".  
@@ -19,4 +19,13 @@ Aide Crontab:
 
 Les données téléchargées sont au format .gpkg et stockées dans le lecteur réseaux "Archives/FEUX_INSIGHT/$year" et mis à jour quotidiennement.
 
-**Remarque : nécessite d'être connecté au VPN insight, possibilité de paramétrer un docker pour faire le travail.
+**Remarque : nécessite d'être connecté au VPN insight, possibilité de paramétrer un docker pour faire le travail.  
+
+## [2] Contrôle des données de surfaces brûlées brutes : 02_Contrôle_Data_Brute.ipynb
+---------------------------------------------------------------------------------
+
+## [3] Dashboard de contrôle des données : 03_Dashboard_controle.ipynb
+---------------------------------------------------------------------------------
+
+## [4] Dashboard de contrôle des données : 03_Dashboard_controle.ipynb
+---------------------------------------------------------------------------------
