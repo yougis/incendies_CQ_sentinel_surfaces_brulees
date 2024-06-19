@@ -1,6 +1,9 @@
 ----------------------------------------------------------------------------------
 # Articulation du projet de Contrôle/Qualité des données de surfaces brûlées
 ---------------------------------------------------------------------------------- 
+---------------------------------------------------------------------------------
+
+# Contrôle des données (rep Contrôle)
 
 ## [1] Récupération des données de surfaces brûlées Sentinel-2 : 01_Recup_data_Sentinel2.ipynb
 ---------------------------------------------------------------------------------- 
@@ -65,8 +68,35 @@ L'objectif du dashboard est d'identifer de possible manquement de détection dû
 ---------------------------------------------------------------------------------
 
 Pour identifer la présence de nuage ou de voile nuageux à l'échelle de la forme, un calcul réalisé à partir de la bande SCL des images Sentinel-2 est réalisé.
-Ce calcul utilise les classes [3, 8, 9, 10, 11] correspondant indépendamment à ???
+Ce calcul utilise les classes [3, 8, 9, 10, 11] correspondant indépendamment à [Cloud Shadow, Cloud medium probability, Cloud high probability, Thin cirrus, Snow or ice]
 
 Si à l'echelle de la forme le pourcentage de cloud cover calculé est supérieur à 0% alors la forme est supprimée de la base de données.  
 Pour récupérer les valeurs de bandes SCL pour chaque forme à la date de détection, il est nécessaire d'utliser un catalogue STAC (ici Amazone) la requête de recherche et de récupération du array étant longue, le script a été parallélisé grâce à dask
 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+
+# Qualification des données (rep Qualif)
+
+## [5] Génération des indicateurs spectraux + création des NetCDF : 01_indicateurs_spectraux.ipynb   
+---------------------------------------------------------------------------------
+
+Cette étape a fait l'objet d'une externalisation auprès d'APID pour faire une étude de faisabilité et un benchmarking des librairies disponibles, les livrables de cette étude sont disponibles dans ce répertoires : N:\Informatique\SIG\Etudes\2023\2309_QC_feux\LIVRABLE  
+
+Ce script à pour but de récupérer les valeurs de bandes des images Sentinel-2 sur un intervale de date modifiable (aujourd'hui : jusqu'à 150 jours avant la date de détection et 40 jours après) pour chacune de nos formes, et calculer des indicateurs spectraux à l'échelle d'une bbox autour de notre formes et pour chacun des pixels avant de les stocker dans un fichier NetCDF.  
+
+Un fichier NetCDF = 1 forme, ils contiennent actuellement les indicateurs suivants, la plage temporelle est fortement dépendante de la disponibilité des images et de la qualité des images (nuages) :  
+
+- NDVI
+- NDWI
+- NBR
+- NBR+
+- BAIS2
+- BADI
+- Mask de la forme
+
+Pour récupérer les bandes Sentinel, l'outil STAC et le catalogue Amazon sont utilisés (attention catalogue incomplet) https://earth-search.aws.element84.com/v1  
+La nomenclature des noms de fichier NetCDF est la suivante : **"nom_de_tuile"+"date"+"surface_id_h3".nc** 
+
+Pour augmenter la rapidité d'exécution du script, une parallélisation du script a été réalisé avec dask, les fchiers en sortie sont stockés sur le disque Archives : A:\INDICATEUR_FEUX\
