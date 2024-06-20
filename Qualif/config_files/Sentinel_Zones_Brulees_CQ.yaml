@@ -1,0 +1,35 @@
+adaptingDataframe:
+  renameMap:
+    id: id_thematique
+    level: type_spatial
+    objectid: id_thematique
+    ogc_fid: id_thematique
+    upper_libelle: dimension_spatiale
+  setValue:
+    colName: id_indicateur
+    value: 4
+  toDrop: []
+catalogUri: data_zones_enjeux_CQ.yaml
+confDb:
+  chunksize: 200
+  schema: feux.cq
+  strategy: append
+  tableName: sentinel_surfaces_detectees
+confDims:
+  isin_id_mesure:
+  - 3
+confRatio:
+  indexList:
+  - id
+  - id_spatial
+  ratioByIdSpatial:
+  - ZEE
+dataName: sentinel_surfaces_detectees_2023
+indexRef: surface_id
+indicateur_dissolve_byList: []
+keepList:
+- date_
+libelle: Sentinel_Zones_Brulees_CQ
+nbchuncks: 20
+overlayHow: intersection
+version: 1
