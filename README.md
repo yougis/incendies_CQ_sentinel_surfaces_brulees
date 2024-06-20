@@ -100,3 +100,10 @@ Pour récupérer les bandes Sentinel, l'outil STAC et le catalogue Amazon sont u
 La nomenclature des noms de fichier NetCDF est la suivante : **"nom_de_tuile"+"date"+"surface_id_h3".nc** 
 
 Pour augmenter la rapidité d'exécution du script, une parallélisation du script a été réalisé avec dask, les fchiers en sortie sont stockés sur le disque Archives : A:\INDICATEUR_FEUX\
+
+
+## [6] Génération des intersections (table de faits) : script bilbo    
+---------------------------------------------------------------------------------
+
+Pour faire les intersections des formes de surfaces brûlées avec les zones à enjeux et les HER, la configuration suivante est nécessaire :
+
