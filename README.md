@@ -101,9 +101,46 @@ La nomenclature des noms de fichier NetCDF est la suivante : **"nom_de_tuile"+"d
 
 Pour augmenter la rapidité d'exécution du script, une parallélisation du script a été réalisé avec dask, les fchiers en sortie sont stockés sur le disque Archives : A:\INDICATEUR_FEUX\
 
-
-## [6] Génération des intersections (table de faits) : script bilbo    
+## [6] Qualification des surfaces : 02_qualification_data.ipynb  
 ---------------------------------------------------------------------------------
 
-Pour faire les intersections des formes de surfaces brûlées avec les zones à enjeux et les HER, la configuration suivante est nécessaire :
+Ce script utilise les valeurs des indicateurs spectraux issues des fichiers NetCDF ainsi que les points chauds VIIRS SNPP et NOAA-20.  
+Les valeurs des indicateurs sont regroupées à l'échelle de la forme par un calcul de médiane.  
 
+Actuellement, trois étapes sont réalisées dans ce script pour invalider ou valider les formes.  
+
+- Les étapes d'invalidation des formes :  
+    - Clasification kmeans utilisant les indicateurs NDVI et NBR, ils permettent de mettre en évidence les surfaces étant sur une végétation en bonne santé, les formes invalidées seront identifiéess dans l'attribut Qualification de la table "sentinel_surfaces_detectees" comme : ** invalid_niv1 **   
+    - Les séries temporelles nous pemettent de mettre en évidence des tendances sur l'indicateur NBR, une tendance égale à 0 ou positive n'inquera pas de perte franche de végétation, les formes qui seront le plus souvent caractérisées par ces tendances positives seront les zones de cuirasse ou de repousse végétale. Ces formes seront identifiéess dans l'attribut Qualification de la table "sentinel_surfaces_detectees" comme : ** invalid_niv2 **     
+- Les étape de validation des formes :  
+    - Les formes intersectants des points chauds VIIRS dans un intervalle de temps de -10 jours jusqu'à la date de détection par rapport à la date de la ruptures estimée du NBR + ayany un dNBR >= 0.11 sont validées, dans la table "sentinel_surfaces_detectees" la valeur de qualification sera : ** validation_viirs_dnbr **   
+
+Ces formes ne seront pas incluses dans les intersections avec les ZAE et n'auront pas de photo-interprétation dédiée.   
+
+## [7] Génération des intersections (table de faits) : script bilbo    
+---------------------------------------------------------------------------------
+
+Pour faire les intersections des formes de surfaces brûlées avec les zones à enjeux et les HER, la configuration suivante est nécessaire :    
+    
+    - Fichiers yaml : Sentinel_Zones_Brulees_CQ.yaml et Zones_enjeux_incendies_CQ.yaml  
+
+L'organisation des run.py doit etre comme suit :   
+
+    list_data_to_calculate  = [ # ZOI / individu
+        "Sentinel_Zones_Brulees_CQ"
+    ]
+
+    steplist= [1,2,3]  # 1 : generate indicators by spatial intersection (interpolation/raster/vector)/ 2: spliting byDims & calculate ratio... / 3: persist
+    list_indicateur_to_calculate = [ # thematique
+        "Zones_enjeux_incendies_CQ"
+    ]
+    listIdMulti=[listIdSpatialHER]
+    
+
+Faire attention de choisir les limites de date souhaitées de la table "sentinel_surfaces_detectees" qui est appelé dans le catalogue intake "Fire_Detection_Data_Quality.yaml", les données seront également filtrées sur l'attribut "qualification" toutes les données "null" dans cette colonne seront utilisées.      
+
+La table de fait sera réutilisée pour faire la photo-inteprrétation dans l'application dédiée.  
+
+----------------------------------------------------------------------------------
+##FIN du CONTROLE QUALITE DES DONNEES SORTIE DE CHAINE
+-----------------------------------------------------------------------------------
