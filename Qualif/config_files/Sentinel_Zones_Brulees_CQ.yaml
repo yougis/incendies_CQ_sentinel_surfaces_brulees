@@ -9,7 +9,7 @@ adaptingDataframe:
     colName: id_indicateur
     value: 4
   toDrop: []
-catalogUri: data_zones_enjeux_CQ.yaml
+catalogUri: Fire_Detection_Data_Quality.yaml
 confDb:
   chunksize: 200
   schema: feux.cq
@@ -24,8 +24,8 @@ confRatio:
   - id_spatial
   ratioByIdSpatial:
   - ZEE
-dataName: sentinel_surfaces_detectees_2023
-indexRef: surface_id
+dataName: sentinel_surfaces_detectees
+indexRef: surface_id_h3
 indicateur_dissolve_byList: []
 keepList:
 - date_

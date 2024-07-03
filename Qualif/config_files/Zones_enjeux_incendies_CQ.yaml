@@ -5,7 +5,7 @@ adaptingDataframe:
     colName: id_indicateur
     value: 3
   toDrop: []
-catalogUri: data_intersect_CQ.yaml
+catalogUri: Fire_Detection_Data_Quality.yaml
 confDb:
   chunksize: 1000
   schema: feux_cq
