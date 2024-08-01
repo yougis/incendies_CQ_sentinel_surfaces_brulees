@@ -91,6 +91,8 @@ def normalize_size(value, min_size, max_size, min_value, max_value):
     """Normalize the size based on the given range using a logarithmic scale."""
     if value == 0:
         return min_size
+    if min_value == max_value:  # Handle the case where there is only one unique value
+        return (min_size + max_size) / 2
     log_min_value = math.log1p(min_value)
     log_max_value = math.log1p(max_value)
     log_value = math.log1p(value)

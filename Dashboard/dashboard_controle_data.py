@@ -124,23 +124,23 @@ def viirs_data(data,stl2_poly):
 
 def create_map(tot_surf_tile, min_size=10, max_size=30, color="orange"):
     tt = pd.merge(centroid_tuile, tot_surf_tile, on='nom', how='left')
-
     tt = tt.rename(columns={0: 'surface'})
+    min_value = np.nanmin(tt['surface'].values)
+    max_value = tt['surface'].max()
+
+    if min_value == max_value:
+        legend_values = [min_value]
+    else:
+        Q1 = round(tt['surface'].quantile(0.25))
+        median_value = round(tt['surface'].median())
+        Q3 = round(tt['surface'].quantile(0.75))
+        legend_values = [Q1, median_value, Q3, round(max_value)]
+
     tt['surface'] = tt['surface'].replace(np.nan, 0)
 
-    min_value = tt['surface'].min()
-    max_value = tt['surface'].max()
-    mean_value = tt['surface'].mean()
+    legend_sizes = [divers.normalize_size(val, min_size, max_size, min_value, max_value) for val in legend_values]
 
-    max_val_leg = math.ceil(max_value / 10.0) * 10
-    mean_val_leg = math.ceil(mean_value / 10.0) * 10
-    intermediate_val_leg = (mean_val_leg + max_val_leg) / 2
-
-    legend_values = [min_value, mean_val_leg, intermediate_val_leg, max_val_leg]
-    legend_sizes = [divers.normalize_size(val, min_size, max_size, min_value, max_val_leg) for val in legend_values]
-
-    tt['normalized_size'] = tt['surface'].apply(divers.normalize_size, args=(min_size, max_size, min_value, max_val_leg))
-
+    tt['normalized_size'] = tt['surface'].apply(divers.normalize_size, args=(min_size, max_size, min_value, max_value))
     tt['color'] = [color if val != 0 else 'black' for val in tt['surface']]
 
     centroid_data_zero = tt[tt['surface'] == 0]
@@ -157,7 +157,7 @@ def create_map(tot_surf_tile, min_size=10, max_size=30, color="orange"):
                  x_axis_type="mercator", y_axis_type="mercator")
 
     map.patches('xs', 'ys', source=geo_source,
-                fill_alpha=1, fill_color='#d9d9d9',line_color="black", line_width=0.4)  # plot of new caledonia land
+                fill_alpha=1, fill_color='#d9d9d9', line_color="black", line_width=0.4)  # plot of new caledonia land
 
     map.multi_line('xs', 'ys', source=tile,
                    line_alpha=1, line_color="black", line_width=1)
@@ -178,7 +178,7 @@ def create_map(tot_surf_tile, min_size=10, max_size=30, color="orange"):
     legend_data = []
     xL, yL = x - 45000, y + 20000
     for i, value in enumerate(legend_values):
-        size = divers.normalize_size(value, min_size, max_size, min_value, max_val_leg)
+        size = divers.normalize_size(value, min_size, max_size, min_value, max_value)
         legend_data.append({'xL': xL, 'yL': yL + i * 40000, 'value': value, 'size': size})
     
     legend_data.append({'xL': xL, 'yL': yL + len(legend_values) * 40000, 'value': 0, 'size': min_size})
@@ -186,8 +186,8 @@ def create_map(tot_surf_tile, min_size=10, max_size=30, color="orange"):
     legend_source_nonzero = ColumnDataSource(legend_df[legend_df['value'] != 0])
     legend_source_zero = ColumnDataSource(legend_df[legend_df['value'] == 0])
 
-    legend_circles = map.circle('xL', 'yL', size='size', source=legend_source_nonzero, color=color, line_color='black', fill_alpha=0.6)
     legend_squares = map.square('xL', 'yL', size='size', source=legend_source_zero, color='black', line_color='black', fill_alpha=0.6)
+    legend_circles = map.circle('xL', 'yL', size='size', source=legend_source_nonzero, color=color, line_color='black', fill_alpha=0.6)
 
     for idx, row in legend_df.iterrows():
         map.text(x=row['xL'] + 20000, y=row['yL'], text=[str(round(row['value'], 2))], text_align='left', text_baseline='middle', text_font_size='8pt')

@@ -32,26 +32,26 @@ sources:
     description: vue_sentinel_brute_no_geom
     driver: intake_geopandas.geopandas.PostGISSource
 
-  incendie_viirs_noaa20_maj:
+  incendie_viirs_noaa20:
     args:
       geopandas_kwargs:
-        geom_col: geometry
+        geom_col: geom
         crs: 3163
-      sql_expr: select * from feux."incendie_viirs_noaa20_maj" 
-      table: feux."incendie_viirs_noaa20_maj"
-      uri: postgresql://{{env("DB_USER")}}:{{env("DB_PWD")}}@{{env("DB_HOST")}}:{{env("DB_PORT")}}/{{env("DB_REF")}}
-    description: incendie_viirs_noaa20_maj
+      sql_expr: select * from alerte_incendie."incendie_viirs_noaa20"
+      table: alerte_incendie."incendie_viirs_noaa20"
+      uri: postgresql://{{env("DB_USER")}}:{{env("DB_PWD")}}@{{env("DB_HOST_app")}}:{{env("DB_PORT_app")}}/{{env("DB_APP")}}
+    description: incendie_viirs_noaa20
     driver: intake_geopandas.geopandas.PostGISSource
 
-  incendie_viirs_snpp_maj:
+  incendie_viirs_snpp:
     args:
       geopandas_kwargs:
-        geom_col: geometry
+        geom_col: geom
         crs: 3163
-      sql_expr: select * from feux."incendie_viirs_snpp_maj" 
-      table: feux."incendie_viirs_snpp_maj"
-      uri: postgresql://{{env("DB_USER")}}:{{env("DB_PWD")}}@{{env("DB_HOST")}}:{{env("DB_PORT")}}/{{env("DB_REF")}}
-    description: incendie_viirs_snpp_maj
+      sql_expr: select * from alerte_incendie."incendie_viirs_snpp" 
+      table: alerte_incendie."incendie_viirs_snpp"
+      uri: postgresql://{{env("DB_USER")}}:{{env("DB_PWD")}}@{{env("DB_HOST_app")}}:{{env("DB_PORT_app")}}/{{env("DB_APP")}}
+    description: incendie_viirs_snpp
     driver: intake_geopandas.geopandas.PostGISSource
 
   vue_nc_simplifiee:
