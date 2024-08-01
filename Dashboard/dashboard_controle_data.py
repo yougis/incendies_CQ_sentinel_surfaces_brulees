@@ -28,8 +28,8 @@ load_dotenv()
 
 catfeux = open_catalog(f'{os.getenv("DATA_CATALOG_DIR")}data_dashboard.yaml')
 table_source='vue_sentinel_brute_no_geom'
-table_viirs_snpp='incendie_viirs_snpp_maj'
-table_viirs_noaa='incendie_viirs_noaa20_maj'
+table_viirs_snpp='incendie_viirs_snpp'
+table_viirs_noaa='incendie_viirs_noaa20'
 fichier_tiles='list_of_tiles'
 catalog_stac="https://earth-search.aws.element84.com/v1"
 
@@ -116,7 +116,7 @@ def viirs_data(data,stl2_poly):
     df = dataCatalog.read()
     df=df.to_crs(epsg=3857)
     df = gpd.sjoin(stl2_poly, df, how='inner')
-    df['date_']=pd.to_datetime(df['BegDate'])
+    df['date_']=pd.to_datetime(df['begDate'])
 
     df['nom']=df['Name'] 
 
