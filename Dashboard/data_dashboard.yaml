@@ -67,7 +67,7 @@ sources:
 
   list_of_tiles:
     args:
-      urlpath: /media/archive/FEUX_INSIGHT/combined_list_of_tiles.csv
+      urlpath: /dashboard/combined_list_of_tiles.csv
       delimiter: ','
       header: null  
     description: combined_list_of_tiles
