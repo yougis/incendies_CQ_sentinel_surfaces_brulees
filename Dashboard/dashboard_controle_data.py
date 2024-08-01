@@ -116,7 +116,7 @@ def viirs_data(data,stl2_poly):
     df = dataCatalog.read()
     df=df.to_crs(epsg=3857)
     df = gpd.sjoin(stl2_poly, df, how='inner')
-    df['date_']=pd.to_datetime(df['begDate'])
+    df['date_']=pd.to_datetime(df['begdate'])
 
     df['nom']=df['Name'] 
 
