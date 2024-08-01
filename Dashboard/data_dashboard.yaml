@@ -14,11 +14,11 @@ sources:
     args:
       geopandas_kwargs:
         geom_col: geometry
-        crs: 3163
-      sql_expr: select * from carto."tiles_sentinel2_UTM_line"
-      table: carto."tiles_sentinel2_UTM_line"
+        crs: 32658
+      sql_expr: select * from carto."tiles_sentinel2_UTM_poly"
+      table: carto."tiles_sentinel2_UTM_poly"
       uri: postgresql://{{env("DB_USER")}}:{{env("DB_PWD")}}@{{env("DB_HOST")}}:{{env("DB_PORT")}}/{{env("DB_WORKSPACE")}}
-    description: limites des tuiles sentinel2 en format ligne
+    description: limites des tuiles sentinel2 en format polygone
     driver: intake_geopandas.geopandas.PostGISSource
 
   vue_sentinel_brute_no_geom:
